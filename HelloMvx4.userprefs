@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{8261DCFD-5767-47D5-AEE2-30B88D407A78}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloMvx4.Droid\Views\FirstView.cs">
+    <Files>
+      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="18" Column="2" />
+      <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="15" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.31.101:5555" />
+</Properties>
