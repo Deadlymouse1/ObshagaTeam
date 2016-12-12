@@ -67,32 +67,30 @@ containing a value of this type.
         public static final int MvxTemplate=0x7f010002;
     }
     public static final class drawable {
-        public static final int splash=0x7f020000;
+        public static final int bg=0x7f020000;
+        public static final int ovalbutton=0x7f020001;
+        public static final int splash=0x7f020002;
     }
     public static final class id {
         public static final int MvvmCrossTagId=0x7f050000;
         public static final int MvxBindingTagUnique=0x7f050001;
-        public static final int acceptButton=0x7f050010;
-        public static final int calendarView1=0x7f050002;
-        public static final int dateTextView=0x7f050006;
-        public static final int dateTextView1=0x7f050007;
-        public static final int intervalEdit=0x7f05000b;
-        public static final int intervalTextView=0x7f05000a;
-        public static final int lastEditText=0x7f05000f;
-        public static final int lastTextView=0x7f05000e;
-        public static final int musicButton=0x7f05000d;
-        public static final int musicTextView=0x7f05000c;
-        public static final int myButton=0x7f050003;
-        public static final int nameEditView=0x7f050005;
-        public static final int nameTextView=0x7f050004;
-        public static final int timePicker=0x7f050009;
-        public static final int timeTextView=0x7f050008;
+        public static final int dateTextView1=0x7f050003;
+        public static final int intervalEdit=0x7f050008;
+        public static final int intervalTextView=0x7f050007;
+        public static final int lastEditText=0x7f05000b;
+        public static final int lastTextView=0x7f05000a;
+        public static final int musicButton=0x7f050009;
+        public static final int myButton=0x7f050002;
+        public static final int nameEditView=0x7f050004;
+        public static final int timePicker=0x7f050006;
+        public static final int timeTextView=0x7f050005;
     }
     public static final class layout {
         public static final int firstview=0x7f040000;
         public static final int main=0x7f040001;
         public static final int secondview=0x7f040002;
         public static final int splashscreen=0x7f040003;
+        public static final int thirdview=0x7f040004;
     }
     public static final class mipmap {
         public static final int icon=0x7f030000;

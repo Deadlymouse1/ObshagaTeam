@@ -1,7 +1,8 @@
 using Android.App;
 using Android.OS;
+
 using MvvmCross.Droid.Views;
-using Android.Widget;
+
 
 namespace HelloMvx4.Droid.Views
 {

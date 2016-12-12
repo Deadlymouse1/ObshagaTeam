@@ -10,6 +10,10 @@ HelloMvx4.Droid.Views.SecondView, HelloMvx4.Droid;md56252f5feec2a5966f29714ad38a
 HelloMvx4.Droid.Views.SecondView, HelloMvx4.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56252f5feec2a5966f29714ad38a58693.SecondView
 HelloMvx4.Droid.Views.SecondView;md56252f5feec2a5966f29714ad38a58693.SecondView
 hellomvx4.droid.views.SecondView;md56252f5feec2a5966f29714ad38a58693.SecondView
+HelloMvx4.Droid.Views.ThirdView, HelloMvx4.Droid;md56252f5feec2a5966f29714ad38a58693.ThirdView
+HelloMvx4.Droid.Views.ThirdView, HelloMvx4.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56252f5feec2a5966f29714ad38a58693.ThirdView
+HelloMvx4.Droid.Views.ThirdView;md56252f5feec2a5966f29714ad38a58693.ThirdView
+hellomvx4.droid.views.ThirdView;md56252f5feec2a5966f29714ad38a58693.ThirdView
 MvvmCross.Binding.Droid.Views.MvxBaseListItemView, MvvmCross.Binding.Droid;md5bf0126c95bf9fc0db24c02c9adb4cfa7.MvxBaseListItemView
 MvvmCross.Binding.Droid.Views.MvxBaseListItemView, MvvmCross.Binding.Droid, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null;md5bf0126c95bf9fc0db24c02c9adb4cfa7.MvxBaseListItemView
 MvvmCross.Binding.Droid.Views.MvxBaseListItemView;md5bf0126c95bf9fc0db24c02c9adb4cfa7.MvxBaseListItemView

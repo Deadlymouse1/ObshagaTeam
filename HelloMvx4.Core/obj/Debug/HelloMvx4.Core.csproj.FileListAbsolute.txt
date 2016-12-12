@@ -18,3 +18,16 @@ F:\C#\calendar\HelloMvx4\HelloMvx4.Core\bin\Debug\MvvmCross.Binding.dll
 F:\C#\calendar\HelloMvx4\HelloMvx4.Core\bin\Debug\MvvmCross.Core.dll
 F:\C#\calendar\HelloMvx4\HelloMvx4.Core\bin\Debug\MvvmCross.Localization.dll
 F:\C#\calendar\HelloMvx4\HelloMvx4.Core\bin\Debug\MvvmCross.Platform.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.pdb
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Binding.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Core.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Localization.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Platform.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.csprojResolveAssemblyReference.cache
+D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.pdb
+D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll.mdb
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll.mdb
+D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll.mdb
+D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll.mdb
