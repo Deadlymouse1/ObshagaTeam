@@ -68,6 +68,15 @@
       <HintPath>..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android.Export" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xuni.Android.Core">
+      <HintPath>..\packages\Xuni.Android.Core.2.3.20163.151\lib\MonoAndroid10\Xuni.Android.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xuni.Android.Calendar">
+      <HintPath>..\packages\Xuni.Android.Calendar.2.3.20163.151\lib\MonoAndroid10\Xuni.Android.Calendar.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -79,6 +88,7 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Views\SecondView.cs" />
     <Compile Include="Views\ThirdView.cs" />
+    <Compile Include="Views\License.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

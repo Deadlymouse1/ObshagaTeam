@@ -8,7 +8,6 @@ namespace HelloMvx4.Core.ViewModels
 		: MvxViewModel
 	{
 		private IMvxCommand _onButtonClickCommand;
-		private IMvxCommand _onButtonClickCommand1;
 		public IMvxCommand MyButtonCommand
 		{
 			get
@@ -18,24 +17,10 @@ namespace HelloMvx4.Core.ViewModels
 				return _onButtonClickCommand;
 			}
 		}
-		public IMvxCommand MyButtonCommand1
-		{
-			get
-			{
-				if (_onButtonClickCommand1 == null)
-					_onButtonClickCommand1 = new MvxCommand(OnButtonClicked1);
-				return _onButtonClickCommand1;
-			}
-		}
 
 		private void OnButtonClicked()
 		{
 			ShowViewModel(typeof(FirstViewModel));
 		}
-		private void OnButtonClicked1()
-		{
-			ShowViewModel(typeof(ThirdViewModel));
-		}
 	}
-
 }

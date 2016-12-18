@@ -49,6 +49,43 @@ namespace HelloMvx4.Droid
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::HelloMvx4.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
 		}
 		
+		public partial class Animation
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int header_slide_bottom_in = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int header_slide_bottom_out = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int header_slide_top_in = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int header_slide_top_out = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int slide_bottom_in = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int slide_bottom_out = 2131034117;
+			
+			// aapt resource value: 0x7f050006
+			public const int slide_top_in = 2131034118;
+			
+			// aapt resource value: 0x7f050007
+			public const int slide_top_out = 2131034119;
+			
+			static Animation()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Animation()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -90,10 +127,46 @@ namespace HelloMvx4.Droid
 			public const int bg = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ovalButton = 2130837505;
+			public const int down_black = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash = 2130837506;
+			public const int down_gray = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int down_white = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int left_black = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int left_gray = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int left_white = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int ovalButton = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int right_black = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int right_gray = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int right_white = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int splash = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int up_black = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int up_gray = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int up_white = 2130837518;
 			
 			static Drawable()
 			{
@@ -108,41 +181,47 @@ namespace HelloMvx4.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MvvmCrossTagId = 2131034112;
+			// aapt resource value: 0x7f070000
+			public const int MvvmCrossTagId = 2131165184;
 			
-			// aapt resource value: 0x7f050001
-			public const int MvxBindingTagUnique = 2131034113;
+			// aapt resource value: 0x7f070001
+			public const int MvxBindingTagUnique = 2131165185;
 			
-			// aapt resource value: 0x7f050003
-			public const int dateTextView1 = 2131034115;
+			// aapt resource value: 0x7f070003
+			public const int calendar = 2131165187;
 			
-			// aapt resource value: 0x7f050008
-			public const int intervalEdit = 2131034120;
+			// aapt resource value: 0x7f070002
+			public const int calendar_item_tv_day = 2131165186;
 			
-			// aapt resource value: 0x7f050007
-			public const int intervalTextView = 2131034119;
+			// aapt resource value: 0x7f070005
+			public const int dateTextView1 = 2131165189;
 			
-			// aapt resource value: 0x7f05000b
-			public const int lastEditText = 2131034123;
+			// aapt resource value: 0x7f07000a
+			public const int intervalEdit = 2131165194;
 			
-			// aapt resource value: 0x7f05000a
-			public const int lastTextView = 2131034122;
+			// aapt resource value: 0x7f070009
+			public const int intervalTextView = 2131165193;
 			
-			// aapt resource value: 0x7f050009
-			public const int musicButton = 2131034121;
+			// aapt resource value: 0x7f07000d
+			public const int lastEditText = 2131165197;
 			
-			// aapt resource value: 0x7f050002
-			public const int myButton = 2131034114;
+			// aapt resource value: 0x7f07000c
+			public const int lastTextView = 2131165196;
 			
-			// aapt resource value: 0x7f050004
-			public const int nameEditView = 2131034116;
+			// aapt resource value: 0x7f07000b
+			public const int musicButton = 2131165195;
 			
-			// aapt resource value: 0x7f050006
-			public const int timePicker = 2131034118;
+			// aapt resource value: 0x7f070004
+			public const int myButton = 2131165188;
 			
-			// aapt resource value: 0x7f050005
-			public const int timeTextView = 2131034117;
+			// aapt resource value: 0x7f070006
+			public const int nameEditView = 2131165190;
+			
+			// aapt resource value: 0x7f070008
+			public const int timePicker = 2131165192;
+			
+			// aapt resource value: 0x7f070007
+			public const int timeTextView = 2131165191;
 			
 			static Id()
 			{
@@ -158,19 +237,22 @@ namespace HelloMvx4.Droid
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int FirstView = 2130968576;
+			public const int day_layout = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int Main = 2130968577;
+			public const int FirstView = 2130968577;
 			
 			// aapt resource value: 0x7f040002
-			public const int SecondView = 2130968578;
+			public const int Main = 2130968578;
 			
 			// aapt resource value: 0x7f040003
-			public const int SplashScreen = 2130968579;
+			public const int SecondView = 2130968579;
 			
 			// aapt resource value: 0x7f040004
-			public const int ThirdView = 2130968580;
+			public const int SplashScreen = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int ThirdView = 2130968581;
 			
 			static Layout()
 			{
@@ -201,11 +283,11 @@ namespace HelloMvx4.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070001
-			public const int app_name = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int app_name = 2131230721;
 			
-			// aapt resource value: 0x7f070000
-			public const int hello = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int hello = 2131230720;
 			
 			static String()
 			{
@@ -221,10 +303,16 @@ namespace HelloMvx4.Droid
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int BaseText = 2131099648;
+			public const int AppBaseTheme = 2131099648;
 			
 			// aapt resource value: 0x7f060001
-			public const int Theme_Splash = 2131099649;
+			public const int AppTheme = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int BaseText = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int Theme_Splash = 2131099651;
 			
 			static Style()
 			{
@@ -276,6 +364,8 @@ namespace HelloMvx4.Droid
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			public static int[] XuniCalendar;
 			
 			static Styleable()
 			{

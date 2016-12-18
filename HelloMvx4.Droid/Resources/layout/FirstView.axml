@@ -5,6 +5,10 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/bg">
+	<com.grapecity.xuni.calendar.XuniCalendar
+		android:id="@+id/calendar"
+		android:layout_width="match_parent"
+		android:layout_height="300dp" />
     <TextView
         android:text="Заметки"
         android:layout_width="300dp"

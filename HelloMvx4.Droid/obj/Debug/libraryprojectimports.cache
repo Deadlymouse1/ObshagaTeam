@@ -2,10 +2,12 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\Xuni.Android.Calendar\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\Xuni.Android.Core\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\MvvmCross.Binding.Droid\library_project_imports\assets</ResolvedAssetDirectory>
@@ -15,9 +17,11 @@
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\Xuni.Android.Calendar.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\__library_projects__\Xuni.Android.Core.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
