@@ -2,20 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\c#project\ObshagaTeam\HelloMvx4.Droid\Resources\layout\ThirdView.axml" line="21" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloMvx4.Droid\Resources\layout\FirstView.axml">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="25" Column="3" />
-      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="18" Column="4" />
+      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="37" Column="34" />
       <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="4" Column="36" />
-      <File FileName="HelloMvx4.Droid\Views\ThirdView.cs" Line="15" Column="1" />
-      <File FileName="HelloMvx4.Droid\Resources\drawable\ovalButton.axml" Line="9" Column="12" />
-      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="87" Column="9" />
-      <File FileName="HelloMvx4.Droid\Resources\layout\FirstView.axml" Line="11" Column="32" />
+      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="18" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.77.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.227.101:5555" />
 </Properties>
