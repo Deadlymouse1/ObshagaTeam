@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MvvmCross.Core.ViewModels;
 
 
@@ -7,8 +8,70 @@ namespace HelloMvx4.Core.ViewModels
 	public class SecondViewModel
 		: MvxViewModel
 	{
+		public void Init(Data data)
+		{
+			DayModel = data.Day;
+			MonthModel = data.Month;
+			YearModel = data.Year;
+		}
+
+		private int _day;
+		public int DayModel
+		{
+			get { return _day; }
+			set { SetProperty(ref _day, value); }
+		}
+
+		private int _month;
+		public int MonthModel
+		{
+			get { return _month; }
+			set { SetProperty(ref _month, value); }
+		}
+
+		private int _year;
+		public int YearModel
+		{
+			get { return _year; }
+			set { SetProperty(ref _year, value); }
+		}
+
+		private string _name;
+		public string NameModel
+		{
+			get { return _name; }
+			set { SetProperty(ref _name, value); }
+		}
+
+		private TimeSpan _time;
+		public TimeSpan TimeModel
+		{
+			get { return _time; }
+			set { SetProperty(ref _time, value); }
+		}
+
+		private string _timeRepeat;
+		public string TimeRepeatModel
+		{
+			get { return _timeRepeat; }
+			set { SetProperty(ref _timeRepeat, value); }
+		}
+
+		private string _sound;
+		public string SoundModel
+		{
+			get { return _sound; }
+			set { SetProperty(ref _sound, value); }
+		}
+
+		private string _more;
+		public string MoreModel
+		{
+			get { return _more; }
+			set { SetProperty(ref _more, value); }
+		}
+
 		private IMvxCommand _onButtonClickCommand;
-		private IMvxCommand _onButtonClickCommand1;
 
 		public IMvxCommand MyButtonCommand
 		{
@@ -19,24 +82,30 @@ namespace HelloMvx4.Core.ViewModels
 				return _onButtonClickCommand;
 			}
 		}
-		public IMvxCommand MyButtonCommand1
-		{
-			get
-			{
-				if (_onButtonClickCommand1 == null)
-					_onButtonClickCommand1 = new MvxCommand(OnButtonClicked1);
-				return _onButtonClickCommand1;
-			}
-		}
-
 
 		private void OnButtonClicked()
 		{
-			ShowViewModel(typeof(FirstViewModel));
-		}
-		private void OnButtonClicked1()
-		{
 			ShowViewModel(typeof(ThirdViewModel));
+		}
+
+		private IMvxCommand _onButtonClickCommand2;
+		public IMvxCommand MyButtonCommand2
+		{
+			get
+			{
+				if (_onButtonClickCommand2 == null)
+					_onButtonClickCommand2 = new MvxCommand(OnButtonClicked2);
+				return _onButtonClickCommand2;
+			}
+		}
+
+		private void OnButtonClicked2()
+		{
+			ShowViewModel<FirstViewModel>(new Record() { Day = DayModel,
+				Month = MonthModel, Year = YearModel,
+				Name = NameModel, Time = TimeModel,
+				TimeRepeat = TimeRepeatModel, Sound = SoundModel,
+				More = MoreModel});
 		}
 	}
 }

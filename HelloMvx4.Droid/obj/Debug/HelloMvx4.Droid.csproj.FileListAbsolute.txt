@@ -210,8 +210,10 @@ F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Droid.Shared.dl
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Localization.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Platform.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Platform.Droid.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xuni.Android.Calendar.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xuni.Android.Core.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Core.pdb
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Core.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Platform.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Binding.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\MvvmCross.Localization.dll.mdb
@@ -238,6 +240,7 @@ F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\drawable\ovalbutton.x
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\R.cs.flag
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\uploadflags.txt
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Droid.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Core.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Java.Interop.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Mono.Android.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Mono.Android.Export.dll.mdb
@@ -265,10 +268,6 @@ F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Net
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xuni.Android.Calendar.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xuni.Android.Core.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll.mdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.csprojResolveAssemblyReference.cache
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.pdb
@@ -341,4 +340,5 @@ D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Runtime.S
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll.mdb
-D:\obshaga\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Droid.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Droid.dll.mdb

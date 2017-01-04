@@ -32,6 +32,8 @@
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\SecondViewModel.cs" />
     <Compile Include="ViewModels\ThirdViewModel.cs" />
+    <Compile Include="ViewModels\Data.cs" />
+    <Compile Include="ViewModels\Record.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">

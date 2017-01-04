@@ -214,6 +214,9 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f07000c
 			public const int musicButton = 2131165196;
 			
+			// aapt resource value: 0x7f070010
+			public const int musicButton1 = 2131165200;
+			
 			// aapt resource value: 0x7f070004
 			public const int myButton = 2131165188;
 			

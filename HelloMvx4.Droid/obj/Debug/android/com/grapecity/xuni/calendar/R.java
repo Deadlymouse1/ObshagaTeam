@@ -105,6 +105,7 @@ containing a value of this type.
         public static final int lastEditText=0x7f07000e;
         public static final int lastTextView=0x7f07000d;
         public static final int musicButton=0x7f07000c;
+        public static final int musicButton1=0x7f070010;
         public static final int myButton=0x7f070004;
         public static final int nameEditView=0x7f070007;
         public static final int scroll=0x7f070005;

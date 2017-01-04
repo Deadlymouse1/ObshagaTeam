@@ -89,6 +89,7 @@
     <Compile Include="Views\SecondView.cs" />
     <Compile Include="Views\ThirdView.cs" />
     <Compile Include="Views\License.cs" />
+    <Compile Include="Views\CalRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

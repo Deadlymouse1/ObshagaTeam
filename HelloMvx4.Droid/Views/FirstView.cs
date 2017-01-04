@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Views;
@@ -5,6 +7,8 @@ using Android.Widget;
 using Com.GrapeCity.Xuni.Calendar;
 using Com.GrapeCity.Xuni.Core;
 using HelloMvx4.Core.ViewModels;
+using Java.Text;
+using MvvmCross.Binding.BindingContext;
 using MvvmCross.Droid.Views;
 
 
@@ -14,12 +18,17 @@ namespace HelloMvx4.Droid.Views
 	public class FirstView : MvxActivity
 	{
 		XuniCalendar calendar;
+		List<CalRecord> records = new List<CalRecord>();
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 			LicenseManager.Key = License.Key;
 			SetContentView(Resource.Layout.FirstView);
+			for (int i = 0; i < (ViewModel as FirstViewModel).getCountRecords; i++)
+			{
+				records.Add(new CalRecord((ViewModel as FirstViewModel).getDayRecords(i), (ViewModel as FirstViewModel).getMonthRecords(i), (ViewModel as FirstViewModel).getYearRecords(i))); 
+			}
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
@@ -33,6 +42,9 @@ namespace HelloMvx4.Droid.Views
 
 			calendar.SelectionChanged += (object sender, CalendarSelectionChangedEventArgs e) =>
 			{
+				(ViewModel as FirstViewModel).DayModel = calendar.SelectedDate.Day;
+				(ViewModel as FirstViewModel).MonthModel = calendar.SelectedDate.Month;
+				(ViewModel as FirstViewModel).YearModel = calendar.SelectedDate.Year;
 				(ViewModel as FirstViewModel).MyButtonCommand.Execute();
 			};
 
@@ -76,8 +88,66 @@ namespace HelloMvx4.Droid.Views
 			// add text element to layout
 			layout.AddView(tv);
 
+			String Year = e.Date.ToString().Split(' ')[5];
+			String Month = e.Date.ToString().Split(' ')[1];
+			int intMonth = 0;
 
 			// add weather image for certain days
+			for (int i = 0; i < records.Count; i++)
+			{
+				if (records[i].Year.ToString() == Year)
+				{
+					switch (Month)
+					{
+						case "Jan":
+							intMonth = 1;
+							break;
+						case "Feb":
+							intMonth = 2;
+							break;
+						case "Mar":
+							intMonth = 3;
+							break;
+						case "Apr":
+							intMonth = 4;
+							break;
+						case "May":
+							intMonth = 5;
+							break;
+						case "Jun":
+							intMonth = 6;
+							break;
+						case "Jul":
+							intMonth = 7;
+							break;
+						case "Aug":
+							intMonth = 8;
+							break;
+						case "Sep":
+							intMonth = 9;
+							break;
+						case "Okt":
+							intMonth = 10;
+							break;
+						case "Now":
+							intMonth = 11;
+							break;
+						case "Dec":
+							intMonth = 12;
+							break;
+						default:
+							break;
+					}
+					if (records[i].Month == intMonth)
+					{
+						if (day == records[i].Day)
+						{
+							layout.SetBackgroundColor(Android.Graphics.Color.Green);
+						}
+					}				
+				}
+			}
+
 			if (day >= 14 && day <= 23)
 			{
 				ImageView iv = new ImageView(ApplicationContext);

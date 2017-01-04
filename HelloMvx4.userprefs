@@ -2,14 +2,27 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\ViewModels\FirstViewModel.cs" line="15" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloMvx4.Droid\Views\CalRecord.cs">
     <Files>
-      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="37" Column="34" />
-      <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="4" Column="36" />
-      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="18" Column="4" />
+      <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="35" Column="41" />
+      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="105" Column="34" />
+      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="1" Column="1" />
+      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="20" Column="3" />
+      <File FileName="HelloMvx4.Droid\Views\SecondView.cs" Line="48" Column="42" />
+      <File FileName="HelloMvx4.Droid\Resources\layout\SecondView.axml" Line="7" Column="9" />
+      <File FileName="HelloMvx4.Droid\Resources\layout\ThirdView.axml" Line="19" Column="46" />
+      <File FileName="HelloMvx4.Droid\Resources\layout\FirstView.axml" Line="2" Column="73" />
+      <File FileName="HelloMvx4.Droid\Views\License.cs" Line="14" Column="2" />
+      <File FileName="HelloMvx4.Droid\Setup.cs" Line="1" Column="1" />
+      <File FileName="HelloMvx4.Droid\SplashScreen.cs" Line="1" Column="1" />
+      <File FileName="HelloMvx4.Core\ViewModels\Record.cs" Line="1" Column="1" />
+      <File FileName="HelloMvx4.Core\ViewModels\Data.cs" Line="1" Column="1" />
+      <File FileName="HelloMvx4.Droid\Views\CalRecord.cs" Line="6" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.227.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid PreferredExecutionTarget="Android.192.168.17.101:5555" />
 </Properties>
