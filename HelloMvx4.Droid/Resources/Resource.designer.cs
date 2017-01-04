@@ -181,14 +181,29 @@ namespace HelloMvx4.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070007
+			public const int AddButton = 2131165191;
+			
+			// aapt resource value: 0x7f070009
+			public const int Button = 2131165193;
+			
+			// aapt resource value: 0x7f070005
+			public const int DeleteButton = 2131165189;
+			
+			// aapt resource value: 0x7f070006
+			public const int EditButton = 2131165190;
+			
 			// aapt resource value: 0x7f070000
 			public const int MvvmCrossTagId = 2131165184;
 			
 			// aapt resource value: 0x7f070001
 			public const int MvxBindingTagUnique = 2131165185;
 			
-			// aapt resource value: 0x7f07000f
-			public const int addButton = 2131165199;
+			// aapt resource value: 0x7f070008
+			public const int TextView = 2131165192;
+			
+			// aapt resource value: 0x7f070015
+			public const int addButton = 2131165205;
 			
 			// aapt resource value: 0x7f070003
 			public const int calendar = 2131165187;
@@ -196,41 +211,44 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f070002
 			public const int calendar_item_tv_day = 2131165186;
 			
-			// aapt resource value: 0x7f070006
-			public const int dateTextView1 = 2131165190;
-			
-			// aapt resource value: 0x7f07000b
-			public const int intervalEdit = 2131165195;
-			
-			// aapt resource value: 0x7f07000a
-			public const int intervalTextView = 2131165194;
-			
-			// aapt resource value: 0x7f07000e
-			public const int lastEditText = 2131165198;
-			
-			// aapt resource value: 0x7f07000d
-			public const int lastTextView = 2131165197;
-			
 			// aapt resource value: 0x7f07000c
-			public const int musicButton = 2131165196;
+			public const int dateTextView1 = 2131165196;
+			
+			// aapt resource value: 0x7f070011
+			public const int intervalEdit = 2131165201;
 			
 			// aapt resource value: 0x7f070010
-			public const int musicButton1 = 2131165200;
+			public const int intervalTextView = 2131165200;
+			
+			// aapt resource value: 0x7f070014
+			public const int lastEditText = 2131165204;
+			
+			// aapt resource value: 0x7f070013
+			public const int lastTextView = 2131165203;
+			
+			// aapt resource value: 0x7f070012
+			public const int musicButton = 2131165202;
+			
+			// aapt resource value: 0x7f070016
+			public const int musicButton1 = 2131165206;
+			
+			// aapt resource value: 0x7f07000a
+			public const int myButton = 2131165194;
+			
+			// aapt resource value: 0x7f07000d
+			public const int nameEditView = 2131165197;
 			
 			// aapt resource value: 0x7f070004
-			public const int myButton = 2131165188;
+			public const int pushUp = 2131165188;
 			
-			// aapt resource value: 0x7f070007
-			public const int nameEditView = 2131165191;
+			// aapt resource value: 0x7f07000b
+			public const int scroll = 2131165195;
 			
-			// aapt resource value: 0x7f070005
-			public const int scroll = 2131165189;
+			// aapt resource value: 0x7f07000f
+			public const int timePicker = 2131165199;
 			
-			// aapt resource value: 0x7f070009
-			public const int timePicker = 2131165193;
-			
-			// aapt resource value: 0x7f070008
-			public const int timeTextView = 2131165192;
+			// aapt resource value: 0x7f07000e
+			public const int timeTextView = 2131165198;
 			
 			static Id()
 			{

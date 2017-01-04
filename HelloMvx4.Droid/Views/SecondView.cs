@@ -39,12 +39,11 @@ namespace HelloMvx4.Droid.Views
 
 			addButton.Click += (object sender, System.EventArgs e) =>
 			{
-
-				(ViewModel as SecondViewModel).NameModel = "aaaa";//name.Text;
+				(ViewModel as SecondViewModel).NameModel = name.Text;
 				(ViewModel as SecondViewModel).TimeModel = time.Value;
-				(ViewModel as SecondViewModel).TimeRepeatModel = "AAA";//timeRepeat.Text;
-				(ViewModel as SecondViewModel).SoundModel = "AAA";//sound.Text;
-				(ViewModel as SecondViewModel).MoreModel = "AAA";//more.Text;
+				(ViewModel as SecondViewModel).TimeRepeatModel = timeRepeat.Text;
+				(ViewModel as SecondViewModel).SoundModel = sound.Text;
+				(ViewModel as SecondViewModel).MoreModel = more.Text;
 				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();				
 			};
 

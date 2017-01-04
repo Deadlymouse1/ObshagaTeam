@@ -19,6 +19,12 @@ namespace HelloMvx4.Droid.Views
 	{
 		XuniCalendar calendar;
 		List<CalRecord> records = new List<CalRecord>();
+		RelativeLayout pushUp;
+		TextView textView;
+		Button button;
+		Button addButton;
+		Button editButton;
+		Button deleteButton;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -32,6 +38,12 @@ namespace HelloMvx4.Droid.Views
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
+			pushUp = FindViewById<RelativeLayout>(Resource.Id.pushUp);
+			textView = FindViewById<TextView>(Resource.Id.TextView);
+			button = FindViewById<Button>(Resource.Id.Button);
+			addButton = FindViewById<Button>(Resource.Id.AddButton);
+			editButton = FindViewById<Button>(Resource.Id.EditButton);
+			deleteButton = FindViewById<Button>(Resource.Id.DeleteButton);
 
 
 			// for vertical scrolling set Orientation
@@ -40,11 +52,32 @@ namespace HelloMvx4.Droid.Views
 			// set maximum selected days
 			calendar.MaxSelectionCount = 1;
 
+			deleteButton.Click += (sender, e) =>
+			{
+				
+			};
+
 			calendar.SelectionChanged += (object sender, CalendarSelectionChangedEventArgs e) =>
 			{
 				(ViewModel as FirstViewModel).DayModel = calendar.SelectedDate.Day;
 				(ViewModel as FirstViewModel).MonthModel = calendar.SelectedDate.Month;
 				(ViewModel as FirstViewModel).YearModel = calendar.SelectedDate.Year;
+				for (int i = 0; i < records.Count; i++)
+				{
+					if (records[i].Year == calendar.SelectedDate.Year)
+					{
+						if (records[i].Month == calendar.SelectedDate.Month)
+						{
+							if (records[i].Day == calendar.SelectedDate.Day)
+							{
+								textView.Visibility = ViewStates.Gone;
+								calendar.Visibility = ViewStates.Invisible;
+								pushUp.Visibility = ViewStates.Visible;
+								return;
+							}
+						}
+					}
+				}
 				(ViewModel as FirstViewModel).MyButtonCommand.Execute();
 			};
 
@@ -146,32 +179,6 @@ namespace HelloMvx4.Droid.Views
 						}
 					}				
 				}
-			}
-
-			if (day >= 14 && day <= 23)
-			{
-				ImageView iv = new ImageView(ApplicationContext);
-				switch (day % 5)
-				{
-					case 0:
-						//iv.SetImageResource(Resource.Drawable.Cloudy);
-						break;
-					case 1:
-						//iv.SetImageResource(Resource.Drawable.PartlyCloudy);
-						break;
-					case 2:
-						//iv.SetImageResource(Resource.Drawable.Rain);
-						break;
-					case 3:
-						//iv.SetImageResource(Resource.Drawable.Storm);
-						break;
-					case 4:
-						//iv.SetImageResource(Resource.Drawable.Sun);
-						break;
-
-				}
-				layout.AddView(iv);
-
 			}
 
 			// finally, set layout to day slot

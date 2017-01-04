@@ -9,13 +9,48 @@
 		android:id="@+id/calendar"
 		android:layout_width="match_parent"
 		android:layout_height="300dp" />
+	<RelativeLayout
+		android:id="@+id/pushUp"
+		android:layout_centerInParent="true"
+    	android:layout_width="fill_parent"
+    	android:layout_height="300dp"
+		android:visibility="gone" >
+		<LinearLayout
+			android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent">
+			<Button
+				android:id="@+id/DeleteButton"
+				android:text="удалить"
+        		android:textSize="20dp"
+        		android:layout_marginBottom="5dp"
+        		android:layout_height="100dp"
+        		android:layout_width="100dp" />
+			<Button
+				android:id="@+id/EditButton"
+				android:text="редактировать"
+        		android:textSize="20dp"
+        		android:layout_marginBottom="5dp"
+        		android:layout_height="100dp"
+        		android:layout_width="100dp" />
+			<Button
+				android:id="@+id/AddButton"
+				android:text="добавить"
+        		android:textSize="20dp"
+        		android:layout_marginBottom="5dp"
+        		android:layout_height="100dp"
+        		android:layout_width="100dp" />
+		</LinearLayout>
+	</RelativeLayout>
     <TextView
+		android:id="@+id/TextView"
         android:text="Заметки"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:textSize="40dp"
         android:layout_marginLeft="210dp" />
     <Button
+			android:id="@+id/Button"
         android:text="Ближайшие дела"
         android:textSize="40dp"
         android:layout_marginBottom="5dp"
