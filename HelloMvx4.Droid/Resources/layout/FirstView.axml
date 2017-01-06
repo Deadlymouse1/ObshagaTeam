@@ -25,7 +25,8 @@
         		android:textSize="20dp"
         		android:layout_marginBottom="5dp"
         		android:layout_height="100dp"
-        		android:layout_width="100dp" />
+        		android:layout_width="100dp"
+				local:MvxBind="Click DeleteButtonClicked"/>
 			<Button
 				android:id="@+id/EditButton"
 				android:text="редактировать"
@@ -49,10 +50,11 @@
         android:layout_height="60dp"
         android:textSize="40dp"
         android:layout_marginLeft="210dp" />
-    <Button
-			android:id="@+id/Button"
+    <TextView
+		android:id="@+id/Soon"
         android:text="Ближайшие дела"
         android:textSize="40dp"
+		android:gravity="center"
         android:layout_marginBottom="5dp"
         android:layout_height="300dp"
         android:layout_width="fill_parent" />

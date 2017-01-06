@@ -2,6 +2,10 @@ HelloMvx4.Droid.SplashScreen, HelloMvx4.Droid;md5301cd21b379ad416d84f4984627479a
 HelloMvx4.Droid.SplashScreen, HelloMvx4.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5301cd21b379ad416d84f4984627479ac.SplashScreen
 HelloMvx4.Droid.SplashScreen;md5301cd21b379ad416d84f4984627479ac.SplashScreen
 hellomvx4.droid.SplashScreen;md5301cd21b379ad416d84f4984627479ac.SplashScreen
+HelloMvx4.Droid.Alarm, HelloMvx4.Droid;md5301cd21b379ad416d84f4984627479ac.Alarm
+HelloMvx4.Droid.Alarm, HelloMvx4.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5301cd21b379ad416d84f4984627479ac.Alarm
+HelloMvx4.Droid.Alarm;md5301cd21b379ad416d84f4984627479ac.Alarm
+hellomvx4.droid.Alarm;md5301cd21b379ad416d84f4984627479ac.Alarm
 HelloMvx4.Droid.Views.FirstView, HelloMvx4.Droid;md56252f5feec2a5966f29714ad38a58693.FirstView
 HelloMvx4.Droid.Views.FirstView, HelloMvx4.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56252f5feec2a5966f29714ad38a58693.FirstView
 HelloMvx4.Droid.Views.FirstView;md56252f5feec2a5966f29714ad38a58693.FirstView

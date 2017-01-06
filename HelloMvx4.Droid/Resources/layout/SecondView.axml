@@ -82,7 +82,7 @@
             android:textSize="24sp"
             android:layout_height="60dp"
             android:layout_width="wrap_content"
-            local:MvxBind="Click MyButtonCommand1"
+            local:MvxBind="Click MyButtonCommand"
             android:gravity="center" />
         <TextView
             android:id="@+id/lastTextView"

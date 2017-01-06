@@ -8,7 +8,12 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/bg" />
+        android:background="@drawable/bg" >
+		<ListView
+				android:id="@+id/audioView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+	</LinearLayout>
     <Button
         android:id="@+id/musicButton1"
         android:text="+"
@@ -17,6 +22,5 @@
         android:layout_width="60dp"
         android:gravity="center"
         android:background="@drawable/ovalButton" 
-		local:MvxBind="Click MyButtonCommand"
-		/>
+		local:MvxBind="Click MyButtonCommand" />
 </RelativeLayout>

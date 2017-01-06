@@ -22,10 +22,10 @@ F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Run
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.ComponentModel.Composition.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Collections.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Linq.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Threading.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Collections.Concurrent.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Reflection.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Linq.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Runtime.Extensions.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Reflection.Extensions.dll

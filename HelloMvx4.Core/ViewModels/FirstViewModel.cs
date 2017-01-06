@@ -9,32 +9,29 @@ namespace HelloMvx4.Core.ViewModels
 	{
 		public void Init(Record record)
 		{
-			if (record.Day != 0)
+			if (record != null)
 			{
-				Records.Add(record);
+				container.AddRecord(record);
 			}
 		}
 
-		public static List<Record> Records = new List<Record>();
-		public int getCountRecords
+		public Record RecordObject { get; set; }
+		public int getRecordsCount()
 		{
-			get { return Records.Count; }
+			return container.getCountRecords;
 		}
 
-		public int getDayRecords (int numberInRecords)
+		public static RecordContainer container = new RecordContainer();
+
+		public string getRecordDate(int index)
 		{
-			return Records[numberInRecords].Day;				
+			return container.GetRecordDate(index);
 		}
 
-		public int getMonthRecords(int numberInRecords)
+		public void deleteRecord(int index)
 		{
-			return Records[numberInRecords].Month;
+			container.Remove(index);
 		}
-		public int getYearRecords(int numberInRecords)
-		{
-			return Records[numberInRecords].Year;
-		}
-
 
 		private int _day;
 		public int DayModel
@@ -55,6 +52,20 @@ namespace HelloMvx4.Core.ViewModels
 		{
 			get { return _year; }
 			set { SetProperty(ref _year, value); }
+		}
+
+		private int _soundPath;
+		public int SoundPath
+		{
+			get { return _soundPath; }
+			set { SetProperty(ref _soundPath, value); }
+		} 
+
+		private int _currentDate;
+		public int CurrentDate
+		{
+			get { return _currentDate; }
+			set { SetProperty(ref _currentDate, value); }
 		}
 
 		private IMvxCommand _onButtonClickCommand;

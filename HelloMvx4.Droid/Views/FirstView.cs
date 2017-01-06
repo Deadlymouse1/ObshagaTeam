@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -21,30 +22,42 @@ namespace HelloMvx4.Droid.Views
 		List<CalRecord> records = new List<CalRecord>();
 		RelativeLayout pushUp;
 		TextView textView;
-		Button button;
+		TextView SoonView;
 		Button addButton;
 		Button editButton;
 		Button deleteButton;
+		AlarmManager am;
+		Intent intent1;
+		PendingIntent pIntent1;
+		Alarm alarm;
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 			LicenseManager.Key = License.Key;
 			SetContentView(Resource.Layout.FirstView);
-			for (int i = 0; i < (ViewModel as FirstViewModel).getCountRecords; i++)
+
+			string date;
+			for (int i = 0; i < (ViewModel as FirstViewModel).getRecordsCount(); i++)
 			{
-				records.Add(new CalRecord((ViewModel as FirstViewModel).getDayRecords(i), (ViewModel as FirstViewModel).getMonthRecords(i), (ViewModel as FirstViewModel).getYearRecords(i))); 
+				date = (ViewModel as FirstViewModel).getRecordDate(i);
+				records.Add(new CalRecord(date.Split('/')[0],
+				                          date.Split('/')[1],
+				                          date.Split('/')[2]));
+				//intent1 = new Intent(this, alarm.Class);
+				//pIntent1 = PendingIntent.GetBroadcast(this, i, intent1, PendingIntentFlags.CancelCurrent);
+				//am.Set(AlarmType.Rtc, SystemClock.ElapsedRealtime() + 1000 * 5, pIntent1);
+				//Toast.MakeText(this, "Alarm Scheduled for Tommrrow", ToastLength.Long).Show();
 			}
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
 			pushUp = FindViewById<RelativeLayout>(Resource.Id.pushUp);
 			textView = FindViewById<TextView>(Resource.Id.TextView);
-			button = FindViewById<Button>(Resource.Id.Button);
+			SoonView = FindViewById<TextView>(Resource.Id.Soon);
 			addButton = FindViewById<Button>(Resource.Id.AddButton);
 			editButton = FindViewById<Button>(Resource.Id.EditButton);
 			deleteButton = FindViewById<Button>(Resource.Id.DeleteButton);
-
 
 			// for vertical scrolling set Orientation
 			calendar.Orientation = CalendarOrientation.Horizontal;
@@ -64,11 +77,11 @@ namespace HelloMvx4.Droid.Views
 				(ViewModel as FirstViewModel).YearModel = calendar.SelectedDate.Year;
 				for (int i = 0; i < records.Count; i++)
 				{
-					if (records[i].Year == calendar.SelectedDate.Year)
+					if (records[i].Year == calendar.SelectedDate.Year.ToString())
 					{
-						if (records[i].Month == calendar.SelectedDate.Month)
+						if (records[i].Month == calendar.SelectedDate.Month.ToString())
 						{
-							if (records[i].Day == calendar.SelectedDate.Day)
+							if (records[i].Day == calendar.SelectedDate.Day.ToString())
 							{
 								textView.Visibility = ViewStates.Gone;
 								calendar.Visibility = ViewStates.Invisible;
@@ -123,57 +136,57 @@ namespace HelloMvx4.Droid.Views
 
 			String Year = e.Date.ToString().Split(' ')[5];
 			String Month = e.Date.ToString().Split(' ')[1];
-			int intMonth = 0;
+			string intMonth = "0";
 
 			// add weather image for certain days
 			for (int i = 0; i < records.Count; i++)
 			{
-				if (records[i].Year.ToString() == Year)
+				if (records[i].Year == Year)
 				{
 					switch (Month)
 					{
 						case "Jan":
-							intMonth = 1;
+							intMonth = "1";
 							break;
 						case "Feb":
-							intMonth = 2;
+							intMonth = "2";
 							break;
 						case "Mar":
-							intMonth = 3;
+							intMonth = "3";
 							break;
 						case "Apr":
-							intMonth = 4;
+							intMonth = "4";
 							break;
 						case "May":
-							intMonth = 5;
+							intMonth = "5";
 							break;
 						case "Jun":
-							intMonth = 6;
+							intMonth = "6";
 							break;
 						case "Jul":
-							intMonth = 7;
+							intMonth = "7";
 							break;
 						case "Aug":
-							intMonth = 8;
+							intMonth = "8";
 							break;
 						case "Sep":
-							intMonth = 9;
+							intMonth = "9";
 							break;
 						case "Okt":
-							intMonth = 10;
+							intMonth = "10";
 							break;
 						case "Now":
-							intMonth = 11;
+							intMonth = "11";
 							break;
 						case "Dec":
-							intMonth = 12;
+							intMonth = "12";
 							break;
 						default:
 							break;
 					}
 					if (records[i].Month == intMonth)
 					{
-						if (day == records[i].Day)
+						if (day.ToString() == records[i].Day)
 						{
 							layout.SetBackgroundColor(Android.Graphics.Color.Green);
 						}

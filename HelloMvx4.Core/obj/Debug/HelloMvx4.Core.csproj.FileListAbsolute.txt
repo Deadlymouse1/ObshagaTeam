@@ -29,14 +29,6 @@ D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll
 D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.pdb
 D:\c#project\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll.mdb
 D:\c#project\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll.mdb
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.pdb
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Binding.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Core.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Localization.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Platform.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.pdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll
 D:\obshaga\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.pdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Binding.dll
@@ -48,7 +40,15 @@ D:\obshaga\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll
 D:\obshaga\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.pdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll.mdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.pdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Binding.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Core.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Localization.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\MvvmCross.Platform.dll
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.csprojResolveAssemblyReference.cache
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.pdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Debug\HelloMvx4.Core.dll.mdb
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Debug\HelloMvx4.Core.dll.mdb

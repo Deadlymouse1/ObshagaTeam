@@ -90,6 +90,7 @@
     <Compile Include="Views\ThirdView.cs" />
     <Compile Include="Views\License.cs" />
     <Compile Include="Views\CalRecord.cs" />
+    <Compile Include="Views\Alarm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -115,9 +116,14 @@
     <AndroidResource Include="Resources\drawable\bg.png" />
     <AndroidResource Include="Resources\layout\ThirdView.axml" />
     <AndroidResource Include="Resources\drawable\ovalButton.axml" />
+    <AndroidResource Include="Resources\raw\sound.mp3" />
+    <AndroidResource Include="Resources\raw\sound2.mp3" />
+    <AndroidResource Include="Resources\raw\sound1.mp3" />
+    <AndroidResource Include="Resources\raw\sound3.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelloMvx4.Core\HelloMvx4.Core.csproj">

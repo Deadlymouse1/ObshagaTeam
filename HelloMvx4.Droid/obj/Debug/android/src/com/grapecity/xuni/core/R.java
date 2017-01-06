@@ -94,26 +94,30 @@ containing a value of this type.
         public static final int up_white=0x7f02000e;
     }
     public static final class id {
-        public static final int Button=0x7f070006;
-        public static final int MvvmCrossTagId=0x7f070000;
-        public static final int MvxBindingTagUnique=0x7f070001;
-        public static final int TextView=0x7f070005;
-        public static final int addButton=0x7f070012;
-        public static final int calendar=0x7f070003;
-        public static final int calendar_item_tv_day=0x7f070002;
-        public static final int dateTextView1=0x7f070009;
-        public static final int intervalEdit=0x7f07000e;
-        public static final int intervalTextView=0x7f07000d;
-        public static final int lastEditText=0x7f070011;
-        public static final int lastTextView=0x7f070010;
-        public static final int musicButton=0x7f07000f;
-        public static final int musicButton1=0x7f070013;
-        public static final int myButton=0x7f070007;
-        public static final int nameEditView=0x7f07000a;
-        public static final int pushUp=0x7f070004;
-        public static final int scroll=0x7f070008;
-        public static final int timePicker=0x7f07000c;
-        public static final int timeTextView=0x7f07000b;
+        public static final int AddButton=0x7f080007;
+        public static final int DeleteButton=0x7f080005;
+        public static final int EditButton=0x7f080006;
+        public static final int MvvmCrossTagId=0x7f080000;
+        public static final int MvxBindingTagUnique=0x7f080001;
+        public static final int Soon=0x7f080009;
+        public static final int TextView=0x7f080008;
+        public static final int addButton=0x7f080015;
+        public static final int audioView=0x7f080016;
+        public static final int calendar=0x7f080003;
+        public static final int calendar_item_tv_day=0x7f080002;
+        public static final int dateTextView1=0x7f08000c;
+        public static final int intervalEdit=0x7f080011;
+        public static final int intervalTextView=0x7f080010;
+        public static final int lastEditText=0x7f080014;
+        public static final int lastTextView=0x7f080013;
+        public static final int musicButton=0x7f080012;
+        public static final int musicButton1=0x7f080017;
+        public static final int myButton=0x7f08000a;
+        public static final int nameEditView=0x7f08000d;
+        public static final int pushUp=0x7f080004;
+        public static final int scroll=0x7f08000b;
+        public static final int timePicker=0x7f08000f;
+        public static final int timeTextView=0x7f08000e;
     }
     public static final class layout {
         public static final int day_layout=0x7f040000;
@@ -126,15 +130,21 @@ containing a value of this type.
     public static final class mipmap {
         public static final int icon=0x7f030000;
     }
+    public static final class raw {
+        public static final int sound=0x7f060000;
+        public static final int sound1=0x7f060001;
+        public static final int sound2=0x7f060002;
+        public static final int sound3=0x7f060003;
+    }
     public static final class string {
-        public static final int app_name=0x7f080001;
-        public static final int hello=0x7f080000;
+        public static final int app_name=0x7f090001;
+        public static final int hello=0x7f090000;
     }
     public static final class style {
-        public static final int AppBaseTheme=0x7f060000;
-        public static final int AppTheme=0x7f060001;
-        public static final int BaseText=0x7f060002;
-        public static final int Theme_Splash=0x7f060003;
+        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppTheme=0x7f070001;
+        public static final int BaseText=0x7f070002;
+        public static final int Theme_Splash=0x7f070003;
     }
     public static final class styleable {
         /** Attributes that can be used with a MvxBinding.

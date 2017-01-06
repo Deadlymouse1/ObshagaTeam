@@ -10,9 +10,13 @@ namespace HelloMvx4.Core.ViewModels
 	{
 		public void Init(Data data)
 		{
-			DayModel = data.Day;
-			MonthModel = data.Month;
-			YearModel = data.Year;
+			if (data.Day != 0)
+			{
+				DayModel = data.Day;
+				MonthModel = data.Month;
+				YearModel = data.Year;
+				SoundPathModel = data.PathMusic;
+			}
 		}
 
 		private int _day;
@@ -64,6 +68,13 @@ namespace HelloMvx4.Core.ViewModels
 			set { SetProperty(ref _sound, value); }
 		}
 
+		private string _soundPath;
+		public string SoundPathModel
+		{
+			get { return _soundPath; }
+			set { SetProperty(ref _soundPath, value); }
+		}
+
 		private string _more;
 		public string MoreModel
 		{
@@ -85,7 +96,7 @@ namespace HelloMvx4.Core.ViewModels
 
 		private void OnButtonClicked()
 		{
-			ShowViewModel(typeof(ThirdViewModel));
+			ShowViewModel<ThirdViewModel>(new Data() { Day = DayModel, Month = MonthModel, Year = YearModel });
 		}
 
 		private IMvxCommand _onButtonClickCommand2;
@@ -105,7 +116,7 @@ namespace HelloMvx4.Core.ViewModels
 				Month = MonthModel, Year = YearModel,
 				Name = NameModel, Time = TimeModel,
 				TimeRepeat = TimeRepeatModel, Sound = SoundModel,
-				More = MoreModel});
+				SoundPath = SoundPathModel, More = MoreModel});
 		}
 	}
 }
