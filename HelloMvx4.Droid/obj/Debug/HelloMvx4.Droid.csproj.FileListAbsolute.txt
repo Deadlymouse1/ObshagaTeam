@@ -196,7 +196,6 @@ D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Net.Htt
 D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
 D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\android\assets\System.Xml.dll.mdb
-D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll.mdb
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.csprojResolveAssemblyReference.cache
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll
 D:\obshaga\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.pdb
@@ -345,4 +344,12 @@ F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound2.mp3
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound1.mp3
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound3.mp3
 F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll.mdb
-F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Droid.dll.mdb
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xuni.Android.Calendar.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\bin\Debug\Xuni.Android.Core.dll
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound.mp3
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound2.mp3
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound1.mp3
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\res\raw\sound3.mp3
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\obj\Debug\HelloMvx4.Droid.dll.mdb
+D:\c#project\ObshagaTeam\HelloMvx4.Droid\bin\Debug\HelloMvx4.Droid.dll.mdb
