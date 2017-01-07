@@ -7,43 +7,14 @@ namespace HelloMvx4.Core.ViewModels
 		: MvxViewModel
 	{
 
-		public void Init(Data data)
+		public void Init(Record record)
 		{
-			if (data.Day != 0)
+			if (record != null)
 			{
-				DayModel = data.Day;
-				MonthModel = data.Month;
-				YearModel = data.Year;
+				this.record = record;
 			}
 		}
-
-		private int _day;
-		public int DayModel
-		{
-			get { return _day; }
-			set { SetProperty(ref _day, value); }
-		}
-
-		private int _month;
-		public int MonthModel
-		{
-			get { return _month; }
-			set { SetProperty(ref _month, value); }
-		}
-
-		private int _year;
-		public int YearModel
-		{
-			get { return _year; }
-			set { SetProperty(ref _year, value); }
-		}
-
-		private string _pathMusic;
-		public string PathMusicModel
-		{
-			get { return _pathMusic; }
-			set { SetProperty(ref _pathMusic, value); }
-		}
+		public Record record;
 
 		private IMvxCommand _onButtonClickCommand;
 		public IMvxCommand MyButtonCommand
@@ -57,7 +28,7 @@ namespace HelloMvx4.Core.ViewModels
 		}
 		private void OnButtonClicked()
 		{
-			ShowViewModel<SecondViewModel>(new Data() { Day = DayModel, Month = MonthModel, Year = YearModel, PathMusic = PathMusicModel });
+			ShowViewModel<SecondViewModel>(record);
 		}
 	}
 }

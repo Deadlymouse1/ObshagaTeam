@@ -1,0 +1,11 @@
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\HelloMvx4.Core.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\MvvmCross.Binding.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\MvvmCross.Core.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\MvvmCross.Localization.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\MvvmCross.Platform.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Release\HelloMvx4.Core.csprojResolveAssemblyReference.cache
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Release\HelloMvx4.Core.dll
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Release\HelloMvx4.Core.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\HelloMvx4.Core.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\obj\Release\HelloMvx4.Core.dll.mdb
+F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Core\bin\Release\HelloMvx4.Core.dll.mdb

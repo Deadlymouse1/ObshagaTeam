@@ -80,7 +80,7 @@ namespace HelloMvx4.Core.ViewModels
 		}
 		private void OnButtonClicked()
 		{
-			ShowViewModel<SecondViewModel>(new Data() { Day = DayModel, Month = MonthModel, Year = YearModel });
+			ShowViewModel<SecondViewModel>(new Record() { Day = DayModel, Month = MonthModel, Year = YearModel });
 		}
 	}
 }

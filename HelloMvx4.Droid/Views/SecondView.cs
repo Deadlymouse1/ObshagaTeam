@@ -26,9 +26,9 @@ namespace HelloMvx4.Droid.Views
 			SetContentView(Resource.Layout.SecondView);
 
 			view = FindViewById<TextView>(Resource.Id.dateTextView1);
-			int i = (ViewModel as SecondViewModel).DayModel;
-			int b = (ViewModel as SecondViewModel).MonthModel;
-			int c = (ViewModel as SecondViewModel).YearModel;
+			int i = (ViewModel as SecondViewModel).record.Day;
+			int b = (ViewModel as SecondViewModel).record.Month;
+			int c = (ViewModel as SecondViewModel).record.Year;
 			string a = string.Format("{0}/{1}/{2}", i, b, c);
 			view.SetText(a, TextView.BufferType.Normal);
 
@@ -44,11 +44,11 @@ namespace HelloMvx4.Droid.Views
 
 			addButton.Click += (object sender, System.EventArgs e) =>
 			{
-				(ViewModel as SecondViewModel).NameModel = name.Text;
-				(ViewModel as SecondViewModel).TimeModel = time.Value;
-				(ViewModel as SecondViewModel).TimeRepeatModel = timeRepeat.Text;
-				(ViewModel as SecondViewModel).SoundModel = sound.Text;
-				(ViewModel as SecondViewModel).MoreModel = more.Text;
+				(ViewModel as SecondViewModel).record.Name = name.Text;
+				(ViewModel as SecondViewModel).record.Time = time.Value;
+				(ViewModel as SecondViewModel).record.TimeRepeat = timeRepeat.Text;
+				(ViewModel as SecondViewModel).record.Sound = sound.Text;
+				(ViewModel as SecondViewModel).record.More = more.Text;
 				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();				
 			};
 		}
