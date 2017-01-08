@@ -12,11 +12,12 @@ namespace HelloMvx4.Core
 				return string.Format("{0}/{1}/{2}", Day, Month, Year);
 			} 
 		}
+		public bool setAlarm { get; set; }
 		public string Name { get; set; }
 		public TimeSpan Time { get; set; }
 		public string TimeRepeat { get; set; }
 		public string Sound { get; set; }
-		public string SoundPath { get; set; }
+		public int SoundId { get; set; }
 		public string More { get; set; }
 	}
 }

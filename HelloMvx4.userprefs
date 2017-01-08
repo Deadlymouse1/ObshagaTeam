@@ -3,23 +3,25 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\Views\Alarm.cs" line="13" column="1" />
+      <Breakpoint file="F:\CALENDAR EASY\ObshagaTeam\HelloMvx4.Droid\Views\AlarmService.cs" line="12" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloMvx4.Droid\Views\FourView.cs">
     <Files>
-      <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="74" Column="7" />
-      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="116" Column="42" />
-      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="43" Column="4" />
-      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="49" Column="7" />
-      <File FileName="HelloMvx4.Droid\Views\Alarm.cs" Line="15" Column="3" />
-      <File FileName="HelloMvx4.Droid\Views\SecondView.cs" Line="43" Column="60" />
-      <File FileName="HelloMvx4.Droid\Views\ThirdView.cs" Line="53" Column="6" />
-      <File FileName="HelloMvx4.Core\ViewModels\Record.cs" Line="5" Column="3" />
-      <File FileName="HelloMvx4.Core\ViewModels\Data.cs" Line="10" Column="39" />
-      <File FileName="HelloMvx4.Core\ViewModels\RecordContainer.cs" Line="34" Column="4" />
-      <File FileName="HelloMvx4.Droid\Views\CalRecord.cs" Line="14" Column="35" />
+      <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="48" Column="47" />
+      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="51" Column="42" />
+      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="33" Column="3" />
+      <File FileName="HelloMvx4.Droid\Views\Alarm.cs" Line="19" Column="47" />
+      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="44" Column="52" />
+      <File FileName="HelloMvx4.Droid\Views\SecondView.cs" Line="57" Column="15" />
+      <File FileName="HelloMvx4.Droid\Views\ThirdView.cs" Line="13" Column="30" />
+      <File FileName="HelloMvx4.Droid\Views\FourView.cs" Line="20" Column="28" />
+      <File FileName="HelloMvx4.Core\ViewModels\RecordContainer.cs" Line="37" Column="3" />
+      <File FileName="HelloMvx4.Droid\Resources\layout\FirstView.axml" Line="18" Column="16" />
+      <File FileName="HelloMvx4.Droid\Resources\layout\FourView.axml" Line="11" Column="9" />
+      <File FileName="HelloMvx4.Droid\Views\CalRecord.cs" Line="10" Column="16" />
+      <File FileName="HelloMvx4.Core\ViewModels\Record.cs" Line="15" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid PreferredExecutionTarget="Android.192.168.227.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid PreferredExecutionTarget="Android.192.168.182.101:5555" />
 </Properties>

@@ -28,6 +28,26 @@ namespace HelloMvx4.Core.ViewModels
 			return container.GetRecordDate(index);
 		}
 
+		public string getRecordName(int index)
+		{
+			return container.GetRecord(index).Name;
+		}
+
+		public int getRecordSoundId(int index)
+		{
+			return container.GetRecord(index).SoundId;
+		}
+
+		public bool getRecordState(int index)
+		{
+			return container.GetRecord(index).setAlarm;
+		}
+
+		public void setRecordState(int index)
+		{
+			container.GetRecord(index).setAlarm = true;
+		}
+
 		public void deleteRecord(int index)
 		{
 			container.Remove(index);
@@ -80,7 +100,7 @@ namespace HelloMvx4.Core.ViewModels
 		}
 		private void OnButtonClicked()
 		{
-			ShowViewModel<SecondViewModel>(new Record() { Day = DayModel, Month = MonthModel, Year = YearModel });
+			ShowViewModel<SecondViewModel>(new Record() { Day = DayModel, Month = MonthModel, Year = YearModel, setAlarm = false });
 		}
 	}
 }

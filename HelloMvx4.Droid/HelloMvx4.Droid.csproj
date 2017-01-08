@@ -89,8 +89,9 @@
     <Compile Include="Views\SecondView.cs" />
     <Compile Include="Views\ThirdView.cs" />
     <Compile Include="Views\License.cs" />
-    <Compile Include="Views\CalRecord.cs" />
     <Compile Include="Views\Alarm.cs" />
+    <Compile Include="Views\FourView.cs" />
+    <Compile Include="Views\CalRecord.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,6 +121,7 @@
     <AndroidResource Include="Resources\raw\sound2.mp3" />
     <AndroidResource Include="Resources\raw\sound1.mp3" />
     <AndroidResource Include="Resources\raw\sound3.mp3" />
+    <AndroidResource Include="Resources\layout\FourView.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

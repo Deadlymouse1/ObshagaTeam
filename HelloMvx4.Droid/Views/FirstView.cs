@@ -8,7 +8,9 @@ using Android.Widget;
 using Com.GrapeCity.Xuni.Calendar;
 using Com.GrapeCity.Xuni.Core;
 using HelloMvx4.Core.ViewModels;
+using Java.Interop;
 using Java.Text;
+using Java.Util;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Droid.Views;
 
@@ -26,10 +28,6 @@ namespace HelloMvx4.Droid.Views
 		Button addButton;
 		Button editButton;
 		Button deleteButton;
-		AlarmManager am;
-		Intent intent1;
-		PendingIntent pIntent1;
-		Alarm alarm;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -44,10 +42,6 @@ namespace HelloMvx4.Droid.Views
 				records.Add(new CalRecord(date.Split('/')[0],
 				                          date.Split('/')[1],
 				                          date.Split('/')[2]));
-				//intent1 = new Intent(this, alarm.Class);
-				//pIntent1 = PendingIntent.GetBroadcast(this, i, intent1, PendingIntentFlags.CancelCurrent);
-				//am.Set(AlarmType.Rtc, SystemClock.ElapsedRealtime() + 1000 * 5, pIntent1);
-				//Toast.MakeText(this, "Alarm Scheduled for Tommrrow", ToastLength.Long).Show();
 			}
 
 			// get chart from view
@@ -91,7 +85,7 @@ namespace HelloMvx4.Droid.Views
 						}
 					}
 				}
-				(ViewModel as FirstViewModel).MyButtonCommand.Execute();
+				(ViewModel as FirstViewModel).MyButtonCommand.Execute(); 
 			};
 
 			// change appearance

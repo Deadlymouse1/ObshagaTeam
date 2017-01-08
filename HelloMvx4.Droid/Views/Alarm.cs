@@ -2,23 +2,30 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Provider;
+using Android.Support.V4.Content;
 using Android.Widget;
+using HelloMvx4.Droid.Views;
+using MvvmCross.Droid.Views;
 
 namespace HelloMvx4.Droid
 {
+	[BroadcastReceiver]
 	public class Alarm : BroadcastReceiver
 	{
 		public override void OnReceive(Context context, Intent intent)
 		{
-			Toast.MakeText(context, "Alarm !!!!!!!!!!", ToastLength.Long).Show();
-		}
+			var message = intent.GetStringExtra("message");
+			var title = intent.GetStringExtra("title");
 
-		public void setAlarm(Context context)
-		{
-			AlarmManager am = (AlarmManager)context.GetSystemService(Context.AlarmService);
-			Intent i = new Intent(context, this.Class); 
-        	PendingIntent pi = PendingIntent.GetBroadcast(context, 0, i, 0);
-			am.SetRepeating(AlarmType.RtcWakeup, SystemClock.ElapsedRealtime() + 1000, 10000, pi); // Millisec * Second * Minute
-    	}
+			var resultIntent = new Intent(context, typeof(FourView));
+			resultIntent.PutExtra("title", intent.GetStringExtra("title"));
+			resultIntent.PutExtra("soundId", intent.GetStringExtra("soundId"));
+			resultIntent.SetFlags(ActivityFlags.NewTask);
+			context.StartActivity(resultIntent);
+			TimeSpan ts1 = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0));
+			long currTime = (long)ts1.TotalMilliseconds;
+			Console.WriteLine("AAAAAAAAAAAAA " + ts1);
+		}
 	}
 }
