@@ -9,13 +9,18 @@ namespace HelloMvx4.Core.ViewModels
 	{
 		public void Init(Record record)
 		{
-			if (record != null)
+			if (record.Day != 0)
 			{
 				container.AddRecord(record);
 			}
 		}
 
-		public Record RecordObject { get; set; }
+		public Record record { get; set; }
+
+		public void setRecordObject(int index)
+		{
+			record = container.GetRecord(index);
+		}
 		public int getRecordsCount()
 		{
 			return container.getCountRecords;
@@ -36,16 +41,6 @@ namespace HelloMvx4.Core.ViewModels
 		public int getRecordSoundId(int index)
 		{
 			return container.GetRecord(index).SoundId;
-		}
-
-		public bool getRecordState(int index)
-		{
-			return container.GetRecord(index).setAlarm;
-		}
-
-		public void setRecordState(int index)
-		{
-			container.GetRecord(index).setAlarm = true;
 		}
 
 		public void deleteRecord(int index)
@@ -74,20 +69,6 @@ namespace HelloMvx4.Core.ViewModels
 			set { SetProperty(ref _year, value); }
 		}
 
-		private int _soundPath;
-		public int SoundPath
-		{
-			get { return _soundPath; }
-			set { SetProperty(ref _soundPath, value); }
-		} 
-
-		private int _currentDate;
-		public int CurrentDate
-		{
-			get { return _currentDate; }
-			set { SetProperty(ref _currentDate, value); }
-		}
-
 		private IMvxCommand _onButtonClickCommand;
 		public IMvxCommand MyButtonCommand
 		{
@@ -100,7 +81,22 @@ namespace HelloMvx4.Core.ViewModels
 		}
 		private void OnButtonClicked()
 		{
-			ShowViewModel<SecondViewModel>(new Record() { Day = DayModel, Month = MonthModel, Year = YearModel, setAlarm = false });
+			ShowViewModel<SecondViewModel>(new Record() { Day = DayModel, Month = MonthModel, Year = YearModel});
+		}
+
+		private IMvxCommand _onButtonClickCommand1;
+		public IMvxCommand MyButtonCommand1
+		{
+			get
+			{
+				if (_onButtonClickCommand1 == null)
+					_onButtonClickCommand1 = new MvxCommand(OnButtonClicked1);
+				return _onButtonClickCommand1;
+			}
+		}
+		private void OnButtonClicked1()
+		{
+			ShowViewModel<SecondViewModel>(record);
 		}
 	}
 }

@@ -17,23 +17,23 @@ using MvvmCross.Droid.Views;
 
 namespace HelloMvx4.Droid.Views
 {
-    [Activity(Label = "View for FirstViewModel")]
+	[Activity(Label = "View for FirstViewModel")]
 	public class FirstView : MvxActivity
 	{
 		XuniCalendar calendar;
 		List<CalRecord> records = new List<CalRecord>();
-		RelativeLayout pushUp;
 		TextView textView;
 		TextView SoonView;
-		Button addButton;
-		Button editButton;
-		Button deleteButton;
+		Button button;
+		AlarmManager am;
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 			LicenseManager.Key = License.Key;
 			SetContentView(Resource.Layout.FirstView);
+
+			am = GetSystemService(AlarmService).JavaCast<AlarmManager>();
 
 			string date;
 			for (int i = 0; i < (ViewModel as FirstViewModel).getRecordsCount(); i++)
@@ -46,51 +46,74 @@ namespace HelloMvx4.Droid.Views
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
-			pushUp = FindViewById<RelativeLayout>(Resource.Id.pushUp);
 			textView = FindViewById<TextView>(Resource.Id.TextView);
 			SoonView = FindViewById<TextView>(Resource.Id.Soon);
-			addButton = FindViewById<Button>(Resource.Id.AddButton);
-			editButton = FindViewById<Button>(Resource.Id.EditButton);
-			deleteButton = FindViewById<Button>(Resource.Id.DeleteButton);
+			button = FindViewById<Button>(Resource.Id.calendarButton);
 
 			// for vertical scrolling set Orientation
 			calendar.Orientation = CalendarOrientation.Horizontal;
+			calendar.FirstDayOfWeek = Com.GrapeCity.Xuni.Calendar.DayOfWeek.Monday;
 
 			// set maximum selected days
 			calendar.MaxSelectionCount = 1;
 
-			deleteButton.Click += (sender, e) =>
-			{
-				
-			};
-
 			calendar.SelectionChanged += (object sender, CalendarSelectionChangedEventArgs e) =>
 			{
-				(ViewModel as FirstViewModel).DayModel = calendar.SelectedDate.Day;
-				(ViewModel as FirstViewModel).MonthModel = calendar.SelectedDate.Month;
-				(ViewModel as FirstViewModel).YearModel = calendar.SelectedDate.Year;
+				bool a = false;
 				for (int i = 0; i < records.Count; i++)
 				{
-					if (records[i].Year == calendar.SelectedDate.Year.ToString())
+					date = (ViewModel as FirstViewModel).getRecordDate(i);
+					if (calendar.SelectedDate.Day.ToString() == date.Split('/')[0] &&
+					    calendar.SelectedDate.Month.ToString() == date.Split('/')[1] &&
+					    calendar.SelectedDate.Year.ToString() == date.Split('/')[2])
 					{
-						if (records[i].Month == calendar.SelectedDate.Month.ToString())
-						{
-							if (records[i].Day == calendar.SelectedDate.Day.ToString())
-							{
-								textView.Visibility = ViewStates.Gone;
-								calendar.Visibility = ViewStates.Invisible;
-								pushUp.Visibility = ViewStates.Visible;
-								return;
-							}
-						}
+						a = true;
+						showPopupMenu(i);
 					}
 				}
-				(ViewModel as FirstViewModel).MyButtonCommand.Execute(); 
+
+				if (!a) {
+					(ViewModel as FirstViewModel).DayModel = calendar.SelectedDate.Day;
+					(ViewModel as FirstViewModel).MonthModel = calendar.SelectedDate.Month;
+					(ViewModel as FirstViewModel).YearModel = calendar.SelectedDate.Year;
+					(ViewModel as FirstViewModel).MyButtonCommand.Execute();
+				}
+
 			};
 
 			// change appearance
 			calendar.DaySlotLoading += Calendar_DaySlotLoading;
 
+		}
+
+		private void showPopupMenu(int i)
+		{
+			PopupMenu popupMenu = new PopupMenu(this, button);
+			popupMenu.Inflate(Resource.Menu.popupmenu);
+			popupMenu.MenuItemClick += (sender, e) =>
+			{
+				int indexIndent = calendar.SelectedDate.Day * 1000000 + calendar.SelectedDate.Month * 10000 + calendar.SelectedDate.Year;
+				var alarmIntent = new Intent(this, typeof(Alarm));
+				var pending = PendingIntent.GetBroadcast(this, indexIndent, alarmIntent, PendingIntentFlags.UpdateCurrent);
+				am.Cancel(pending);
+				if (e.Item.TitleFormatted.ToString() == "Удалить")
+				{
+					records.RemoveAt(i);
+					(ViewModel as FirstViewModel).deleteRecord(i);
+				}
+				else
+				{
+					(ViewModel as FirstViewModel).setRecordObject(i);
+					(ViewModel as FirstViewModel).MyButtonCommand1.Execute();
+				}
+			};
+
+			popupMenu.DismissEvent += (sender, e) =>
+			{
+				Console.WriteLine("menu dismissed");
+			};
+
+			popupMenu.Show();
 		}
 
 		private void Calendar_DaySlotLoading(object sender, CalendarDaySlotLoadingEventArgs e)
@@ -178,13 +201,11 @@ namespace HelloMvx4.Droid.Views
 						default:
 							break;
 					}
-					if (records[i].Month == intMonth)
+
+					if (records[i].Month == intMonth && day.ToString() == records[i].Day)
 					{
-						if (day.ToString() == records[i].Day)
-						{
-							layout.SetBackgroundColor(Android.Graphics.Color.Green);
-						}
-					}				
+						layout.SetBackgroundColor(Android.Graphics.Color.Green);
+					}
 				}
 			}
 

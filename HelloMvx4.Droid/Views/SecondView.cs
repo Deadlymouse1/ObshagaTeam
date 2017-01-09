@@ -35,6 +35,8 @@ namespace HelloMvx4.Droid.Views
 			string a = string.Format("{0}/{1}/{2}", i, b, c);
 			view.SetText(a, TextView.BufferType.Normal);
 
+			int indexIndent = i * 1000000 + b * 10000 + c;
+
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			Date strDate = sdf.Parse(a);
 
@@ -46,10 +48,21 @@ namespace HelloMvx4.Droid.Views
 			addButton = FindViewById<Button>(Resource.Id.addButton);
 			am = GetSystemService(AlarmService).JavaCast<AlarmManager>();
 
+			if ((ViewModel as SecondViewModel).record.Name != null)
+			{
+				name.Text = (ViewModel as SecondViewModel).record.Name;
+				time.Hour = (ViewModel as SecondViewModel).record.Hour;
+				time.Minute = (ViewModel as SecondViewModel).record.Min;
+				timeRepeat.Text = (ViewModel as SecondViewModel).record.TimeRepeat;
+				sound.Text = (ViewModel as SecondViewModel).record.Sound;
+				more.Text = (ViewModel as SecondViewModel).record.More;
+			}
+
 			addButton.Click += (object sender, System.EventArgs e) =>
 			{
 				(ViewModel as SecondViewModel).record.Name = name.Text;
-				(ViewModel as SecondViewModel).record.Time = time.Value;
+				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
+				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
 				(ViewModel as SecondViewModel).record.TimeRepeat = timeRepeat.Text;
 				(ViewModel as SecondViewModel).record.SoundId = Resource.Raw.sound;//sound.Text;
 				(ViewModel as SecondViewModel).record.More = more.Text;
@@ -58,15 +71,10 @@ namespace HelloMvx4.Droid.Views
 				alarmIntent.PutExtra("title", name.Text);
 				alarmIntent.PutExtra("soundId", Resource.Raw.sound);
 				TimeSpan ts1 = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0));
-				TimeSpan ts = (new DateTime(c, b, i, time.Value.Hours - 5, time.Value.Minutes, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
-				long currTime = (long)ts.TotalMilliseconds; //System.DateTime.Now.Millisecond; 
-				long currTime1 = (long)ts1.TotalMilliseconds;
-				Console.WriteLine("Время которое поставили" + new DateTime(c, b, i, time.Value.Hours, time.Value.Minutes, 0));
-				Console.WriteLine(currTime + "AAA");
-				Console.WriteLine("Текущее время" + DateTime.Now);
-				Console.WriteLine(currTime1 + "BBB");
+				TimeSpan ts = (new DateTime(c, b, i, time.Value.Hours, time.Value.Minutes, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
+				long currTime = (long)ts.TotalMilliseconds - 18000000 ; 
 
-				var pending = PendingIntent.GetBroadcast(this, time.Value.Minutes, alarmIntent, PendingIntentFlags.UpdateCurrent);
+				var pending = PendingIntent.GetBroadcast(this, indexIndent, alarmIntent, PendingIntentFlags.UpdateCurrent);
 				am.Set(AlarmType.RtcWakeup, currTime, pending);
 
 				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();				

@@ -122,10 +122,12 @@
     <AndroidResource Include="Resources\raw\sound1.mp3" />
     <AndroidResource Include="Resources\raw\sound3.mp3" />
     <AndroidResource Include="Resources\layout\FourView.axml" />
+    <AndroidResource Include="Resources\menu\popupmenu.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelloMvx4.Core\HelloMvx4.Core.csproj">
