@@ -13,9 +13,40 @@ namespace HelloMvx4.Core.ViewModels
 			{
 				container.AddRecord(record);
 			}
+
+			setSoonView();
 		}
 
 		public Record record { get; set; }
+
+		public void setSoonView()
+		{
+			long soonRecord = 0;
+			TimeSpan currentMs = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0));
+			long currTime = (long)currentMs.TotalMilliseconds;
+
+			for (int i = 0; i < container.getCountRecords; i++)
+			{
+				TimeSpan recordDate = (new DateTime(container.GetRecord(i).Year, container.GetRecord(i).Month, container.GetRecord(i).Day, container.GetRecord(i).Hour, container.GetRecord(i).Min, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
+				if (currTime > (long)recordDate.TotalMilliseconds)
+				{
+					continue;
+				}
+				else
+				{
+					if (soonRecord == 0)
+					{
+						soonRecord = (long)recordDate.TotalMilliseconds - currTime;
+						setRecordObject(i);
+					}
+					if (soonRecord > ((long)recordDate.TotalMilliseconds - currTime))
+					{
+						soonRecord = (long)recordDate.TotalMilliseconds - currTime;
+						setRecordObject(i);
+					}
+				}
+			}
+		}
 
 		public void setRecordObject(int index)
 		{

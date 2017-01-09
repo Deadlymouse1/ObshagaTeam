@@ -34,30 +34,34 @@ namespace HelloMvx4.Droid.Views
 			{
 				if (e.Position == 0)
 				{
-					_player.Stop();
-					_player = MediaPlayer.Create(this, Resource.Raw.sound);
-					_player.Start();
+					//_player.Stop();
+					//_player = MediaPlayer.Create(this, Resource.Raw.sound);
+					//_player.Start();
+					(ViewModel as ThirdViewModel).record.Sound = "sound";
 					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound;
 				}
 				else if (e.Position == 1)
 				{
-					_player.Stop();
-					_player = MediaPlayer.Create(this, Resource.Raw.sound1);
-					_player.Start();
+					//_player.Stop();
+					//_player = MediaPlayer.Create(this, Resource.Raw.sound1);
+					//_player.Start();
+					(ViewModel as ThirdViewModel).record.Sound = "sound1";
 					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound1;
 				}
 				else if (e.Position == 2)
 				{
-					_player.Stop();
-					_player = MediaPlayer.Create(this, Resource.Raw.sound2);
-					_player.Start();
+					//_player.Stop();
+					//_player = MediaPlayer.Create(this, Resource.Raw.sound2);
+					//_player.Start();
+					(ViewModel as ThirdViewModel).record.Sound = "sound2";
 					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound2;
 				}
 				else if (e.Position == 3)
 				{
-					_player.Stop();
-					_player = MediaPlayer.Create(this, Resource.Raw.sound3);
-					_player.Start();
+					//_player.Stop();
+					//_player = MediaPlayer.Create(this, Resource.Raw.sound3);
+					//_player.Start();
+					(ViewModel as ThirdViewModel).record.Sound = "sound3";
 					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound3;
 				}
 			}; 

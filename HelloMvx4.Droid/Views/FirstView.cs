@@ -22,8 +22,9 @@ namespace HelloMvx4.Droid.Views
 	{
 		XuniCalendar calendar;
 		List<CalRecord> records = new List<CalRecord>();
-		TextView textView;
-		TextView SoonView;
+		TextView SoonViewName;
+		TextView SoonViewTime;
+		TextView SoonViewMore;
 		Button button;
 		AlarmManager am;
 
@@ -46,9 +47,17 @@ namespace HelloMvx4.Droid.Views
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
-			textView = FindViewById<TextView>(Resource.Id.TextView);
-			SoonView = FindViewById<TextView>(Resource.Id.Soon);
 			button = FindViewById<Button>(Resource.Id.calendarButton);
+			SoonViewName = FindViewById<TextView>(Resource.Id.SoonEventName);
+			SoonViewTime = FindViewById<TextView>(Resource.Id.SoonEventTime);
+			SoonViewMore = FindViewById<TextView>(Resource.Id.SoonEventMore);
+			if ((ViewModel as FirstViewModel).record != null)
+			{
+				SoonViewName.Text = (ViewModel as FirstViewModel).record.Name;
+				SoonViewTime.Text = (ViewModel as FirstViewModel).record.RecordDate + " " + (ViewModel as FirstViewModel).record.Hour + ":" + (ViewModel as FirstViewModel).record.Min;
+				SoonViewMore.Text = (ViewModel as FirstViewModel).record.More;
+			}
+
 
 			// for vertical scrolling set Orientation
 			calendar.Orientation = CalendarOrientation.Horizontal;
@@ -83,6 +92,7 @@ namespace HelloMvx4.Droid.Views
 
 			// change appearance
 			calendar.DaySlotLoading += Calendar_DaySlotLoading;
+			calendar.SelectionBackgroundColor = Android.Graphics.Color.White;
 
 		}
 
@@ -100,6 +110,19 @@ namespace HelloMvx4.Droid.Views
 				{
 					records.RemoveAt(i);
 					(ViewModel as FirstViewModel).deleteRecord(i);
+					(ViewModel as FirstViewModel).setSoonView();
+					if ((ViewModel as FirstViewModel).record != null)
+					{
+						SoonViewName.Text = (ViewModel as FirstViewModel).record.Name;
+						SoonViewTime.Text = (ViewModel as FirstViewModel).record.RecordDate + " " + (ViewModel as FirstViewModel).record.Hour + ":" + (ViewModel as FirstViewModel).record.Min;
+						SoonViewMore.Text = (ViewModel as FirstViewModel).record.More;
+					}
+					if ((ViewModel as FirstViewModel).getRecordsCount() == 0)
+					{
+						SoonViewName.Text = "";
+						SoonViewTime.Text = "";
+						SoonViewMore.Text = "";
+					}
 				}
 				else
 				{

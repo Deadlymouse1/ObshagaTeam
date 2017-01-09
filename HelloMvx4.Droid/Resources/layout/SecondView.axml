@@ -21,7 +21,8 @@
             android:layout_height="60dp"
             android:gravity="center"
             android:textSize="24dp"
-            android:elegantTextHeight="true" />
+            android:elegantTextHeight="true"
+			android:maxLength="50" />
         <EditText
             android:id="@+id/nameEditView"
             android:layout_below="@+id/dateTextView1"
@@ -82,7 +83,6 @@
             android:textSize="24sp"
             android:layout_height="60dp"
             android:layout_width="wrap_content"
-            local:MvxBind="Click MyButtonCommand"
             android:gravity="center" />
         <TextView
             android:id="@+id/lastTextView"
@@ -110,7 +110,6 @@
             android:layout_height="60dp"
             android:layout_width="60dp"
             android:gravity="center"
-            android:background="@drawable/ovalButton"
-            local:MvxBind="Click MyButtonCommand" />
+            android:background="@drawable/ovalButton" />
     </RelativeLayout>
 </ScrollView>

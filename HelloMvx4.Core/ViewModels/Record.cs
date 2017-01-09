@@ -12,6 +12,7 @@ namespace HelloMvx4.Core
 				return string.Format("{0}/{1}/{2}", Day, Month, Year);
 			} 
 		}
+
 		public string Name { get; set; }
 		public int Hour { get; set; }
 		public int Min { get; set; }

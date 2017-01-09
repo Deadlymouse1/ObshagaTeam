@@ -48,6 +48,16 @@ namespace HelloMvx4.Droid.Views
 			addButton = FindViewById<Button>(Resource.Id.addButton);
 			am = GetSystemService(AlarmService).JavaCast<AlarmManager>();
 
+			sound.Click += (object sender, EventArgs e) =>
+			{
+				(ViewModel as SecondViewModel).record.Name = name.Text;
+				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
+				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
+				(ViewModel as SecondViewModel).record.TimeRepeat = timeRepeat.Text;
+				(ViewModel as SecondViewModel).record.More = more.Text;
+				(ViewModel as SecondViewModel).MyButtonCommand.Execute();
+			};
+
 			if ((ViewModel as SecondViewModel).record.Name != null)
 			{
 				name.Text = (ViewModel as SecondViewModel).record.Name;
@@ -56,28 +66,44 @@ namespace HelloMvx4.Droid.Views
 				timeRepeat.Text = (ViewModel as SecondViewModel).record.TimeRepeat;
 				sound.Text = (ViewModel as SecondViewModel).record.Sound;
 				more.Text = (ViewModel as SecondViewModel).record.More;
+
 			}
 
 			addButton.Click += (object sender, System.EventArgs e) =>
 			{
+				if (name.Text == "")
+				{
+					Toast toast1 = Toast.MakeText(this, "Напишите название", ToastLength.Short);
+					toast1.Show();
+					return;
+				}
+
+				if (sound.Text == "Выберите мелодию")
+				{
+					Toast toast1 = Toast.MakeText(this, "Выберите музыку", ToastLength.Short);
+					toast1.Show();
+					return;
+				}
 				(ViewModel as SecondViewModel).record.Name = name.Text;
 				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
 				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
 				(ViewModel as SecondViewModel).record.TimeRepeat = timeRepeat.Text;
-				(ViewModel as SecondViewModel).record.SoundId = Resource.Raw.sound;//sound.Text;
+				(ViewModel as SecondViewModel).record.SoundId = Resource.Raw.sound; //sound.Text;
 				(ViewModel as SecondViewModel).record.More = more.Text;
 
 				var alarmIntent = new Intent(this, typeof(Alarm));
 				alarmIntent.PutExtra("title", name.Text);
 				alarmIntent.PutExtra("soundId", Resource.Raw.sound);
-				TimeSpan ts1 = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0));
 				TimeSpan ts = (new DateTime(c, b, i, time.Value.Hours, time.Value.Minutes, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
 				long currTime = (long)ts.TotalMilliseconds - 18000000 ; 
 
 				var pending = PendingIntent.GetBroadcast(this, indexIndent, alarmIntent, PendingIntentFlags.UpdateCurrent);
 				am.Set(AlarmType.RtcWakeup, currTime, pending);
 
-				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();				
+				Toast toast = Toast.MakeText(this, "Запись сделана", ToastLength.Short);
+				toast.Show();
+
+				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();
 			};
 		}
 	}
