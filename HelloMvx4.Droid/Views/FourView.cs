@@ -20,6 +20,8 @@ namespace HelloMvx4.Droid
 	public class FourView : Activity
 	{
 		TextView text;
+		TextView time;
+		TextView more;
 		Button button;
 		MediaPlayer _player = new MediaPlayer();
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -27,7 +29,11 @@ namespace HelloMvx4.Droid
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.FourView);
 			text = FindViewById<TextView>(Resource.Id.Name);
+			time = FindViewById<TextView>(Resource.Id.Time);
+			more = FindViewById<TextView>(Resource.Id.MoreRecord);
 			text.Text = Intent.GetStringExtra("title");
+			time.Text = Intent.GetStringExtra("hour") + ":" + Intent.GetStringExtra("min");
+			more.Text = Intent.GetStringExtra("more");
 			button = FindViewById<Button>(Resource.Id.StopButton);
 			int soundId = Resource.Raw.sound;
 			switch (Intent.GetStringExtra("soundId"))

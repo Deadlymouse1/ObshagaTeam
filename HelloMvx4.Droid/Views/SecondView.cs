@@ -90,6 +90,9 @@ namespace HelloMvx4.Droid.Views
 
 				var alarmIntent = new Intent(this, typeof(Alarm));
 				alarmIntent.PutExtra("title", name.Text);
+				alarmIntent.PutExtra("hour", time.Value.Hours.ToString());
+				alarmIntent.PutExtra("min", time.Value.Minutes.ToString());
+				alarmIntent.PutExtra("more", more.Text);
 				alarmIntent.PutExtra("soundId", (ViewModel as SecondViewModel).record.SoundId);
 				TimeSpan ts = (new DateTime(c, b, i, time.Value.Hours, time.Value.Minutes, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
 				long currTime = (long)ts.TotalMilliseconds - 18000000 ; 

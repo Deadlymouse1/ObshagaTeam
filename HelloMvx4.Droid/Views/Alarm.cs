@@ -15,17 +15,19 @@ namespace HelloMvx4.Droid
 	{
 		public override void OnReceive(Context context, Intent intent)
 		{
-			var message = intent.GetStringExtra("message");
-			var title = intent.GetStringExtra("title");
-
+			Console.WriteLine(intent.GetStringExtra("hour") + "AAAAAAAAA");
+			Console.WriteLine(intent.GetStringExtra("min") + "AAAAAAAAA");
+			Console.WriteLine(intent.GetStringExtra("more") + "AAAAAAAAA");
 			var resultIntent = new Intent(context, typeof(FourView));
 			resultIntent.PutExtra("title", intent.GetStringExtra("title"));
+			resultIntent.PutExtra("hour", intent.GetStringExtra("hour"));
+			resultIntent.PutExtra("min", intent.GetStringExtra("min"));
+			resultIntent.PutExtra("more", intent.GetStringExtra("more"));
 			resultIntent.PutExtra("soundId", intent.GetStringExtra("soundId"));
 			resultIntent.SetFlags(ActivityFlags.NewTask);
 			context.StartActivity(resultIntent);
 			TimeSpan ts1 = (DateTime.Now - new DateTime(1970, 1, 1, 0, 0, 0));
 			long currTime = (long)ts1.TotalMilliseconds;
-			Console.WriteLine("AAAAAAAAAAAAA " + ts1);
 		}
 	}
 }

@@ -1561,32 +1561,38 @@ namespace HelloMvx4.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f08005c
+			public const int MoreRecord = 2131230812;
+			
 			// aapt resource value: 0x7f08000a
 			public const int MvvmCrossTagId = 2131230730;
 			
 			// aapt resource value: 0x7f08000b
 			public const int MvxBindingTagUnique = 2131230731;
 			
-			// aapt resource value: 0x7f080059
-			public const int Name = 2131230809;
+			// aapt resource value: 0x7f08005a
+			public const int Name = 2131230810;
 			
-			// aapt resource value: 0x7f080057
-			public const int SoonEventMore = 2131230807;
-			
-			// aapt resource value: 0x7f080055
-			public const int SoonEventName = 2131230805;
+			// aapt resource value: 0x7f080058
+			public const int SoonEventMore = 2131230808;
 			
 			// aapt resource value: 0x7f080056
-			public const int SoonEventTime = 2131230806;
+			public const int SoonEventName = 2131230806;
 			
-			// aapt resource value: 0x7f08005a
-			public const int StopButton = 2131230810;
+			// aapt resource value: 0x7f080057
+			public const int SoonEventTime = 2131230807;
 			
-			// aapt resource value: 0x7f080054
-			public const int UpcomingEvents = 2131230804;
+			// aapt resource value: 0x7f08005d
+			public const int StopButton = 2131230813;
 			
-			// aapt resource value: 0x7f08005c
-			public const int action0 = 2131230812;
+			// aapt resource value: 0x7f08005b
+			public const int Time = 2131230811;
+			
+			// aapt resource value: 0x7f080055
+			public const int UpcomingEvents = 2131230805;
+			
+			// aapt resource value: 0x7f08005f
+			public const int action0 = 2131230815;
 			
 			// aapt resource value: 0x7f080041
 			public const int action_bar = 2131230785;
@@ -1612,8 +1618,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080042
 			public const int action_context_bar = 2131230786;
 			
-			// aapt resource value: 0x7f080060
-			public const int action_divider = 2131230816;
+			// aapt resource value: 0x7f080063
+			public const int action_divider = 2131230819;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -1633,8 +1639,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080027
 			public const int activity_chooser_view_content = 2131230759;
 			
-			// aapt resource value: 0x7f080073
-			public const int addButton = 2131230835;
+			// aapt resource value: 0x7f080076
+			public const int addButton = 2131230838;
 			
 			// aapt resource value: 0x7f080031
 			public const int alertTitle = 2131230769;
@@ -1642,8 +1648,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f08001e
 			public const int always = 2131230750;
 			
-			// aapt resource value: 0x7f080074
-			public const int audioView = 2131230836;
+			// aapt resource value: 0x7f080077
+			public const int audioView = 2131230839;
 			
 			// aapt resource value: 0x7f08001b
 			public const int beginning = 2131230747;
@@ -1651,35 +1657,35 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080037
 			public const int buttonPanel = 2131230775;
 			
-			// aapt resource value: 0x7f080052
-			public const int calendar = 2131230802;
+			// aapt resource value: 0x7f080053
+			public const int calendar = 2131230803;
 			
 			// aapt resource value: 0x7f080050
 			public const int calendar_item_tv_day = 2131230800;
 			
-			// aapt resource value: 0x7f08005d
-			public const int cancel_action = 2131230813;
+			// aapt resource value: 0x7f080060
+			public const int cancel_action = 2131230816;
 			
-			// aapt resource value: 0x7f080058
-			public const int card_viewFourView = 2131230808;
+			// aapt resource value: 0x7f080059
+			public const int card_viewFourView = 2131230809;
 			
-			// aapt resource value: 0x7f080053
-			public const int card_viewSecondView1 = 2131230803;
-			
-			// aapt resource value: 0x7f08006c
-			public const int card_viewSecondView2 = 2131230828;
+			// aapt resource value: 0x7f080054
+			public const int card_viewSecondView1 = 2131230804;
 			
 			// aapt resource value: 0x7f08006f
-			public const int card_viewSecondView3 = 2131230831;
+			public const int card_viewSecondView2 = 2131230831;
 			
-			// aapt resource value: 0x7f080071
-			public const int card_viewSecondView4 = 2131230833;
+			// aapt resource value: 0x7f080072
+			public const int card_viewSecondView3 = 2131230834;
+			
+			// aapt resource value: 0x7f080074
+			public const int card_viewSecondView4 = 2131230836;
 			
 			// aapt resource value: 0x7f080039
 			public const int checkbox = 2131230777;
 			
-			// aapt resource value: 0x7f080063
-			public const int chronometer = 2131230819;
+			// aapt resource value: 0x7f080066
+			public const int chronometer = 2131230822;
 			
 			// aapt resource value: 0x7f08001f
 			public const int collapseActionView = 2131230751;
@@ -1693,8 +1699,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080035
 			public const int customPanel = 2131230773;
 			
-			// aapt resource value: 0x7f08006a
-			public const int dateTextView1 = 2131230826;
+			// aapt resource value: 0x7f08006d
+			public const int dateTextView1 = 2131230829;
 			
 			// aapt resource value: 0x7f08003f
 			public const int decor_content_parent = 2131230783;
@@ -1711,8 +1717,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f08001c
 			public const int end = 2131230748;
 			
-			// aapt resource value: 0x7f080068
-			public const int end_padder = 2131230824;
+			// aapt resource value: 0x7f08006b
+			public const int end_padder = 2131230827;
 			
 			// aapt resource value: 0x7f080028
 			public const int expand_activities_button = 2131230760;
@@ -1735,20 +1741,23 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080029
 			public const int image = 2131230761;
 			
-			// aapt resource value: 0x7f080067
-			public const int info = 2131230823;
+			// aapt resource value: 0x7f08006a
+			public const int info = 2131230826;
+			
+			// aapt resource value: 0x7f080051
+			public const int invisibleButton = 2131230801;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f080072
-			public const int lastEditText = 2131230834;
+			// aapt resource value: 0x7f080075
+			public const int lastEditText = 2131230837;
 			
-			// aapt resource value: 0x7f080061
-			public const int line1 = 2131230817;
+			// aapt resource value: 0x7f080064
+			public const int line1 = 2131230820;
 			
-			// aapt resource value: 0x7f080065
-			public const int line3 = 2131230821;
+			// aapt resource value: 0x7f080068
+			public const int line3 = 2131230824;
 			
 			// aapt resource value: 0x7f08000c
 			public const int listMode = 2131230732;
@@ -1756,17 +1765,17 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f08002b
 			public const int list_item = 2131230763;
 			
-			// aapt resource value: 0x7f08005f
-			public const int media_actions = 2131230815;
+			// aapt resource value: 0x7f080062
+			public const int media_actions = 2131230818;
 			
-			// aapt resource value: 0x7f080077
-			public const int menu1 = 2131230839;
+			// aapt resource value: 0x7f08007a
+			public const int menu1 = 2131230842;
 			
-			// aapt resource value: 0x7f080078
-			public const int menu2 = 2131230840;
+			// aapt resource value: 0x7f08007b
+			public const int menu2 = 2131230843;
 			
-			// aapt resource value: 0x7f080076
-			public const int menugroup1 = 2131230838;
+			// aapt resource value: 0x7f080079
+			public const int menugroup1 = 2131230841;
 			
 			// aapt resource value: 0x7f08001d
 			public const int middle = 2131230749;
@@ -1774,17 +1783,17 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080016
 			public const int multiply = 2131230742;
 			
-			// aapt resource value: 0x7f080070
-			public const int musicButton = 2131230832;
+			// aapt resource value: 0x7f080073
+			public const int musicButton = 2131230835;
 			
-			// aapt resource value: 0x7f080075
-			public const int musicButton1 = 2131230837;
+			// aapt resource value: 0x7f080078
+			public const int musicButton1 = 2131230840;
 			
-			// aapt resource value: 0x7f08005b
-			public const int myButton = 2131230811;
+			// aapt resource value: 0x7f08005e
+			public const int myButton = 2131230814;
 			
-			// aapt resource value: 0x7f08006b
-			public const int nameEditView = 2131230827;
+			// aapt resource value: 0x7f08006e
+			public const int nameEditView = 2131230830;
 			
 			// aapt resource value: 0x7f080021
 			public const int never = 2131230753;
@@ -1810,8 +1819,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080017
 			public const int screen = 2131230743;
 			
-			// aapt resource value: 0x7f080069
-			public const int scroll = 2131230825;
+			// aapt resource value: 0x7f08006c
+			public const int scroll = 2131230828;
 			
 			// aapt resource value: 0x7f080033
 			public const int scrollView = 2131230771;
@@ -1873,8 +1882,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f08001a
 			public const int src_over = 2131230746;
 			
-			// aapt resource value: 0x7f08005e
-			public const int status_bar_latest_event_content = 2131230814;
+			// aapt resource value: 0x7f080061
+			public const int status_bar_latest_event_content = 2131230817;
 			
 			// aapt resource value: 0x7f08004c
 			public const int submit_area = 2131230796;
@@ -1882,23 +1891,23 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f08000e
 			public const int tabMode = 2131230734;
 			
-			// aapt resource value: 0x7f080066
-			public const int text = 2131230822;
+			// aapt resource value: 0x7f080069
+			public const int text = 2131230825;
 			
-			// aapt resource value: 0x7f080064
-			public const int text2 = 2131230820;
+			// aapt resource value: 0x7f080067
+			public const int text2 = 2131230823;
 			
 			// aapt resource value: 0x7f080034
 			public const int textSpacerNoButtons = 2131230772;
 			
-			// aapt resource value: 0x7f080062
-			public const int time = 2131230818;
+			// aapt resource value: 0x7f080065
+			public const int time = 2131230821;
 			
-			// aapt resource value: 0x7f08006e
-			public const int timePicker = 2131230830;
+			// aapt resource value: 0x7f080071
+			public const int timePicker = 2131230833;
 			
-			// aapt resource value: 0x7f08006d
-			public const int timeTextView = 2131230829;
+			// aapt resource value: 0x7f080070
+			public const int timeTextView = 2131230832;
 			
 			// aapt resource value: 0x7f08002d
 			public const int title = 2131230765;
@@ -1906,8 +1915,8 @@ namespace HelloMvx4.Droid
 			// aapt resource value: 0x7f080030
 			public const int title_template = 2131230768;
 			
-			// aapt resource value: 0x7f080051
-			public const int toolbar = 2131230801;
+			// aapt resource value: 0x7f080052
+			public const int toolbar = 2131230802;
 			
 			// aapt resource value: 0x7f08002f
 			public const int topPanel = 2131230767;

@@ -38,7 +38,7 @@ namespace HelloMvx4.Droid.Views
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "sound";
+					(ViewModel as ThirdViewModel).record.Sound = "Dead By April - What Can I Say";
 					(ViewModel as ThirdViewModel).record.SoundId = 0;
 				}
 				else if (e.Position == 1)
@@ -46,7 +46,7 @@ namespace HelloMvx4.Droid.Views
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound1);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "sound1";
+					(ViewModel as ThirdViewModel).record.Sound = "Skillet - Comatose";
 					(ViewModel as ThirdViewModel).record.SoundId = 1;
 				}
 				else if (e.Position == 2)
@@ -54,7 +54,7 @@ namespace HelloMvx4.Droid.Views
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound2);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "sound2";
+					(ViewModel as ThirdViewModel).record.Sound = "Three Days Grace - Last to Know";
 					(ViewModel as ThirdViewModel).record.SoundId = 2;
 				}
 				else if (e.Position == 3)
@@ -62,7 +62,7 @@ namespace HelloMvx4.Droid.Views
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound3);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "sound3";
+					(ViewModel as ThirdViewModel).record.Sound = "Руки Вверх - Забери Ключи";
 					(ViewModel as ThirdViewModel).record.SoundId = 3;
 				}
 			}; 

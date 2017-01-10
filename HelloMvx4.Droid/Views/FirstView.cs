@@ -25,6 +25,7 @@ namespace HelloMvx4.Droid.Views
 		TextView SoonViewName;
 		TextView SoonViewTime;
 		TextView SoonViewMore;
+		Button button;
 		AlarmManager am;
 		Toolbar toolbar;
 
@@ -47,6 +48,7 @@ namespace HelloMvx4.Droid.Views
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
+			button = FindViewById<Button>(Resource.Id.invisibleButton);
 			SoonViewName = FindViewById<TextView>(Resource.Id.SoonEventName);
 			SoonViewTime = FindViewById<TextView>(Resource.Id.SoonEventTime);
 			SoonViewMore = FindViewById<TextView>(Resource.Id.SoonEventMore);
@@ -102,7 +104,7 @@ namespace HelloMvx4.Droid.Views
 
 		private void showPopupMenu(int i)
 		{
-			PopupMenu popupMenu = new PopupMenu(this, toolbar);
+			PopupMenu popupMenu = new PopupMenu(this, button);
 			popupMenu.Inflate(Resource.Menu.popupmenu);
 			popupMenu.MenuItemClick += (sender, e) =>
 			{
