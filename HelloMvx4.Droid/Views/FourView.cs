@@ -29,11 +29,30 @@ namespace HelloMvx4.Droid
 			text = FindViewById<TextView>(Resource.Id.Name);
 			text.Text = Intent.GetStringExtra("title");
 			button = FindViewById<Button>(Resource.Id.StopButton);
-			//_player = MediaPlayer.Create(this, (Android.Net.Uri)Intent.GetStringExtra("soundId"));
-			//_player.Start();
+			int soundId = Resource.Raw.sound;
+			switch (Intent.GetStringExtra("soundId"))
+			{
+				case "0":
+					soundId = Resource.Raw.sound;
+					break;
+				case "1":
+					soundId = Resource.Raw.sound1;
+					break;
+				case "2":
+					soundId = Resource.Raw.sound2;
+					break;
+				case "3":
+					soundId = Resource.Raw.sound3;
+					break;
+			}
+
+
+
+			_player = MediaPlayer.Create(this, soundId);
+			_player.Start();
 			button.Click += (object sender, EventArgs e) =>
 			{
-				//_player.Stop();
+				_player.Stop();
 				var resultIntent = new Intent(this, typeof(FirstView));
 				resultIntent.SetFlags(ActivityFlags.NewTask);
 				StartActivity(resultIntent);

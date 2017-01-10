@@ -86,13 +86,11 @@ namespace HelloMvx4.Droid.Views
 				(ViewModel as SecondViewModel).record.Name = name.Text;
 				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
 				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
-
-				(ViewModel as SecondViewModel).record.SoundId = Resource.Raw.sound; //sound.Text;
 				(ViewModel as SecondViewModel).record.More = more.Text;
 
 				var alarmIntent = new Intent(this, typeof(Alarm));
 				alarmIntent.PutExtra("title", name.Text);
-				alarmIntent.PutExtra("soundId", Resource.Raw.sound);
+				alarmIntent.PutExtra("soundId", (ViewModel as SecondViewModel).record.SoundId);
 				TimeSpan ts = (new DateTime(c, b, i, time.Value.Hours, time.Value.Minutes, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
 				long currTime = (long)ts.TotalMilliseconds - 18000000 ; 
 

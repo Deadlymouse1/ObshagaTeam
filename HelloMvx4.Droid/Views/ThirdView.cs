@@ -23,10 +23,10 @@ namespace HelloMvx4.Droid.Views
 			SetContentView(Resource.Layout.ThirdView);
 			listAudio = FindViewById<ListView>(Resource.Id.audioView);
 
-			AudioList.Add("aaaa");
-			AudioList.Add("bbbb");
-			AudioList.Add("cccc");
-			AudioList.Add("dddd");
+			AudioList.Add("Dead By April - What Can I Say ");
+			AudioList.Add("Skillet - Comatose");
+			AudioList.Add("Three Days Grace - Last to Know");
+			AudioList.Add("Руки Вверх - Забери Ключи");
 
 			ArrayAdapter<string> adapter = new ArrayAdapter<string>(this,Android.Resource.Layout.SimpleListItem1, AudioList);
 			listAudio.Adapter = adapter;
@@ -35,35 +35,35 @@ namespace HelloMvx4.Droid.Views
 			{
 				if (e.Position == 0)
 				{
-					//_player.Stop();
-					//_player = MediaPlayer.Create(this, Resource.Raw.sound);
-					//_player.Start();
+					_player.Stop();
+					_player = MediaPlayer.Create(this, Resource.Raw.sound);
+					_player.Start();
 					(ViewModel as ThirdViewModel).record.Sound = "sound";
-					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound;
+					(ViewModel as ThirdViewModel).record.SoundId = 0;
 				}
 				else if (e.Position == 1)
 				{
-					//_player.Stop();
-					//_player = MediaPlayer.Create(this, Resource.Raw.sound1);
-					//_player.Start();
+					_player.Stop();
+					_player = MediaPlayer.Create(this, Resource.Raw.sound1);
+					_player.Start();
 					(ViewModel as ThirdViewModel).record.Sound = "sound1";
-					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound1;
+					(ViewModel as ThirdViewModel).record.SoundId = 1;
 				}
 				else if (e.Position == 2)
 				{
-					//_player.Stop();
-					//_player = MediaPlayer.Create(this, Resource.Raw.sound2);
-					//_player.Start();
+					_player.Stop();
+					_player = MediaPlayer.Create(this, Resource.Raw.sound2);
+					_player.Start();
 					(ViewModel as ThirdViewModel).record.Sound = "sound2";
-					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound2;
+					(ViewModel as ThirdViewModel).record.SoundId = 2;
 				}
 				else if (e.Position == 3)
 				{
-					//_player.Stop();
-					//_player = MediaPlayer.Create(this, Resource.Raw.sound3);
-					//_player.Start();
+					_player.Stop();
+					_player = MediaPlayer.Create(this, Resource.Raw.sound3);
+					_player.Start();
 					(ViewModel as ThirdViewModel).record.Sound = "sound3";
-					(ViewModel as ThirdViewModel).record.SoundId = Resource.Raw.sound3;
+					(ViewModel as ThirdViewModel).record.SoundId = 3;
 				}
 			}; 
 
