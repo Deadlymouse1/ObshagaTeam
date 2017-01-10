@@ -32,7 +32,7 @@ namespace HelloMvx4.Droid
 			time = FindViewById<TextView>(Resource.Id.Time);
 			more = FindViewById<TextView>(Resource.Id.MoreRecord);
 			text.Text = Intent.GetStringExtra("title");
-			time.Text = Intent.GetStringExtra("hour") + ":" + Intent.GetStringExtra("min");
+			time.Text = Intent.GetStringExtra("time");
 			more.Text = Intent.GetStringExtra("more");
 			button = FindViewById<Button>(Resource.Id.StopButton);
 			int soundId = Resource.Raw.sound;

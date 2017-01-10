@@ -17,6 +17,8 @@ namespace HelloMvx4.Droid.Views
 		MediaPlayer _player = new MediaPlayer();
 		List<string> AudioList = new List<string>();
 		Toolbar toolbar;
+		public new ThirdViewModel ViewModel { get { return base.ViewModel as ThirdViewModel; } }
+
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
@@ -38,32 +40,32 @@ namespace HelloMvx4.Droid.Views
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "Dead By April - What Can I Say";
-					(ViewModel as ThirdViewModel).record.SoundId = 0;
+					ViewModel.record.Sound = "Dead By April - What Can I Say";
+					ViewModel.record.SoundId = 0;
 				}
 				else if (e.Position == 1)
 				{
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound1);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "Skillet - Comatose";
-					(ViewModel as ThirdViewModel).record.SoundId = 1;
+					ViewModel.record.Sound = "Skillet - Comatose";
+					ViewModel.record.SoundId = 1;
 				}
 				else if (e.Position == 2)
 				{
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound2);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "Three Days Grace - Last to Know";
-					(ViewModel as ThirdViewModel).record.SoundId = 2;
+					ViewModel.record.Sound = "Three Days Grace - Last to Know";
+					ViewModel.record.SoundId = 2;
 				}
 				else if (e.Position == 3)
 				{
 					_player.Stop();
 					_player = MediaPlayer.Create(this, Resource.Raw.sound3);
 					_player.Start();
-					(ViewModel as ThirdViewModel).record.Sound = "Руки Вверх - Забери Ключи";
-					(ViewModel as ThirdViewModel).record.SoundId = 3;
+					ViewModel.record.Sound = "Руки Вверх - Забери Ключи";
+					ViewModel.record.SoundId = 3;
 				}
 			}; 
 
@@ -72,7 +74,7 @@ namespace HelloMvx4.Droid.Views
 			fileDialog.Click += (sender, e) =>
 			{
 				_player.Stop();
-				(ViewModel as ThirdViewModel).MyButtonCommand.Execute();
+				ViewModel.MyButtonCommand.Execute();
 			};
 
 			toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);

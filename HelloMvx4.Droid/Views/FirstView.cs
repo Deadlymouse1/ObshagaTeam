@@ -29,6 +29,8 @@ namespace HelloMvx4.Droid.Views
 		AlarmManager am;
 		Toolbar toolbar;
 
+		public new FirstViewModel ViewModel { get { return base.ViewModel as FirstViewModel; } }
+			
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
@@ -38,9 +40,9 @@ namespace HelloMvx4.Droid.Views
 			am = GetSystemService(AlarmService).JavaCast<AlarmManager>();
 
 			string date;
-			for (int i = 0; i < (ViewModel as FirstViewModel).getRecordsCount(); i++)
+			for (int i = 0; i < ViewModel.getRecordsCount(); i++)
 			{
-				date = (ViewModel as FirstViewModel).getRecordDate(i);
+				date = ViewModel.getRecordDate(i);
 				records.Add(new CalRecord(date.Split('/')[0],
 				                          date.Split('/')[1],
 				                          date.Split('/')[2]));
@@ -52,11 +54,16 @@ namespace HelloMvx4.Droid.Views
 			SoonViewName = FindViewById<TextView>(Resource.Id.SoonEventName);
 			SoonViewTime = FindViewById<TextView>(Resource.Id.SoonEventTime);
 			SoonViewMore = FindViewById<TextView>(Resource.Id.SoonEventMore);
-			if ((ViewModel as FirstViewModel).record != null)
+			if (ViewModel.record != null)
 			{
-				SoonViewName.Text = (ViewModel as FirstViewModel).record.Name;
-				SoonViewTime.Text = (ViewModel as FirstViewModel).record.RecordDate + " " + (ViewModel as FirstViewModel).record.Hour + ":" + (ViewModel as FirstViewModel).record.Min;
-				SoonViewMore.Text = (ViewModel as FirstViewModel).record.More;
+				SoonViewName.Text = ViewModel.record.Name;
+				string c = ":";
+				if (ViewModel.record.Min < 10)
+				{
+					c = ":0";
+				}
+				SoonViewTime.Text = ViewModel.record.RecordDate + " " + ViewModel.record.Hour + c + ViewModel.record.Min;
+				SoonViewMore.Text = ViewModel.record.More;
 			}
 
 
@@ -72,7 +79,7 @@ namespace HelloMvx4.Droid.Views
 				bool a = false;
 				for (int i = 0; i < records.Count; i++)
 				{
-					date = (ViewModel as FirstViewModel).getRecordDate(i);
+					date = ViewModel.getRecordDate(i);
 					if (calendar.SelectedDate.Day.ToString() == date.Split('/')[0] &&
 					    calendar.SelectedDate.Month.ToString() == date.Split('/')[1] &&
 					    calendar.SelectedDate.Year.ToString() == date.Split('/')[2])
@@ -83,10 +90,10 @@ namespace HelloMvx4.Droid.Views
 				}
 
 				if (!a) {
-					(ViewModel as FirstViewModel).DayModel = calendar.SelectedDate.Day;
-					(ViewModel as FirstViewModel).MonthModel = calendar.SelectedDate.Month;
-					(ViewModel as FirstViewModel).YearModel = calendar.SelectedDate.Year;
-					(ViewModel as FirstViewModel).MyButtonCommand.Execute();
+					ViewModel.DayModel = calendar.SelectedDate.Day;
+					ViewModel.MonthModel = calendar.SelectedDate.Month;
+					ViewModel.YearModel = calendar.SelectedDate.Year;
+					ViewModel.MyButtonCommand.Execute();
 				}
 
 			};
@@ -115,15 +122,20 @@ namespace HelloMvx4.Droid.Views
 				if (e.Item.TitleFormatted.ToString() == "Удалить")
 				{
 					records.RemoveAt(i);
-					(ViewModel as FirstViewModel).deleteRecord(i);
-					(ViewModel as FirstViewModel).setSoonView();
-					if ((ViewModel as FirstViewModel).record != null)
+					ViewModel.deleteRecord(i);
+					ViewModel.setSoonView();
+					if (ViewModel.record != null)
 					{
-						SoonViewName.Text = (ViewModel as FirstViewModel).record.Name;
-						SoonViewTime.Text = (ViewModel as FirstViewModel).record.RecordDate + " " + (ViewModel as FirstViewModel).record.Hour + ":" + (ViewModel as FirstViewModel).record.Min;
-						SoonViewMore.Text = (ViewModel as FirstViewModel).record.More;
+						SoonViewName.Text = ViewModel.record.Name;
+						string b = ":";
+						if (ViewModel.record.Min < 10)
+						{
+							b = ":0";
+						}
+						SoonViewTime.Text = ViewModel.record.RecordDate + " " + ViewModel.record.Hour + b + ViewModel.record.Min;
+						SoonViewMore.Text = ViewModel.record.More;
 					}
-					if ((ViewModel as FirstViewModel).getRecordsCount() == 0)
+					if (ViewModel.getRecordsCount() == 0)
 					{
 						SoonViewName.Text = "";
 						SoonViewTime.Text = "";
@@ -132,8 +144,8 @@ namespace HelloMvx4.Droid.Views
 				}
 				else
 				{
-					(ViewModel as FirstViewModel).setRecordObject(i);
-					(ViewModel as FirstViewModel).MyButtonCommand1.Execute();
+					ViewModel.setRecordObject(i);
+					ViewModel.MyButtonCommand1.Execute();
 				}
 			};
 

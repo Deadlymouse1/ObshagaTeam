@@ -22,15 +22,18 @@ namespace HelloMvx4.Droid.Views
 		EditText more;
 		Button addButton;
 		AlarmManager am;
+
+		public new SecondViewModel ViewModel { get { return base.ViewModel as SecondViewModel; } }
+
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.SecondView);
 
 			view = FindViewById<TextView>(Resource.Id.dateTextView1);
-			int i = (ViewModel as SecondViewModel).record.Day;
-			int b = (ViewModel as SecondViewModel).record.Month;
-			int c = (ViewModel as SecondViewModel).record.Year;
+			int i = ViewModel.record.Day;
+			int b = ViewModel.record.Month;
+			int c = ViewModel.record.Year;
 			string a = string.Format("{0}/{1}/{2}", i, b, c);
 			view.SetText(a, TextView.BufferType.Normal);
 
@@ -49,22 +52,22 @@ namespace HelloMvx4.Droid.Views
 
 			sound.Click += (object sender, EventArgs e) =>
 			{
-				(ViewModel as SecondViewModel).record.Name = name.Text;
-				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
-				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
+				ViewModel.record.Name = name.Text;
+				ViewModel.record.Hour = time.Value.Hours;
+				ViewModel.record.Min = time.Value.Minutes;
 
-				(ViewModel as SecondViewModel).record.More = more.Text;
-				(ViewModel as SecondViewModel).MyButtonCommand.Execute();
+				ViewModel.record.More = more.Text;
+				ViewModel.MyButtonCommand.Execute();
 			};
 
-			if ((ViewModel as SecondViewModel).record.Name != null)
+			if (ViewModel.record.Name != null)
 			{
-				name.Text = (ViewModel as SecondViewModel).record.Name;
-				time.Hour = (ViewModel as SecondViewModel).record.Hour;
-				time.Minute = (ViewModel as SecondViewModel).record.Min;
+				name.Text = ViewModel.record.Name;
+				time.Hour = ViewModel.record.Hour;
+				time.Minute = ViewModel.record.Min;
 
-				sound.Text = (ViewModel as SecondViewModel).record.Sound;
-				more.Text = (ViewModel as SecondViewModel).record.More;
+				sound.Text = ViewModel.record.Sound;
+				more.Text = ViewModel.record.More;
 
 			}
 
@@ -83,17 +86,23 @@ namespace HelloMvx4.Droid.Views
 					toast1.Show();
 					return;
 				}
-				(ViewModel as SecondViewModel).record.Name = name.Text;
-				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
-				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
-				(ViewModel as SecondViewModel).record.More = more.Text;
+				ViewModel.record.Name = name.Text;
+				ViewModel.record.Hour = time.Value.Hours;
+				ViewModel.record.Min = time.Value.Minutes;
+				ViewModel.record.More = more.Text;
 
 				var alarmIntent = new Intent(this, typeof(Alarm));
 				alarmIntent.PutExtra("title", name.Text);
-				alarmIntent.PutExtra("hour", time.Value.Hours.ToString());
-				alarmIntent.PutExtra("min", time.Value.Minutes.ToString());
+				if (time.Value.Minutes < 10)
+				{
+					alarmIntent.PutExtra("time", time.Value.Hours + ":0" + time.Value.Minutes);
+				}
+				else
+				{
+					alarmIntent.PutExtra("time", time.Value.Hours + ":" + time.Value.Minutes);
+				}
 				alarmIntent.PutExtra("more", more.Text);
-				alarmIntent.PutExtra("soundId", (ViewModel as SecondViewModel).record.SoundId);
+				alarmIntent.PutExtra("soundId", ViewModel.record.SoundId.ToString());
 				TimeSpan ts = (new DateTime(c, b, i, time.Value.Hours, time.Value.Minutes, 0) - new DateTime(1970, 1, 1, 0, 0, 0));
 				long currTime = (long)ts.TotalMilliseconds - 18000000 ; 
 
@@ -103,7 +112,7 @@ namespace HelloMvx4.Droid.Views
 				Toast toast = Toast.MakeText(this, "Запись сделана", ToastLength.Short);
 				toast.Show();
 
-				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();
+				ViewModel.MyButtonCommand2.Execute();
 			};
 			var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 			SetActionBar(toolbar);
