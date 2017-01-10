@@ -139,6 +139,7 @@ namespace HelloMvx4.Droid.Views
 
 			popupMenu.DismissEvent += (sender, e) =>
 			{
+				calendar.Selected = false;
 				Console.WriteLine("menu dismissed");
 			};
 
