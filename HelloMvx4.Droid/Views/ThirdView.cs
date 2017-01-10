@@ -9,13 +9,14 @@ using HelloMvx4.Core.ViewModels;
 
 namespace HelloMvx4.Droid.Views
 {
-	[Activity(Label = "View for ThirdView")]
+	[Activity(Label = "View for ThirdView", Theme = "@style/MyTheme")]
 	public class ThirdView : MvxActivity
 	{
 		Button fileDialog;
 		ListView listAudio;
 		MediaPlayer _player = new MediaPlayer();
 		List<string> AudioList = new List<string>();
+		Toolbar toolbar;
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
@@ -74,9 +75,15 @@ namespace HelloMvx4.Droid.Views
 				(ViewModel as ThirdViewModel).MyButtonCommand.Execute();
 			};
 
+			toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+			SetActionBar(toolbar);
+
+			ActionBar.Title = "Выбор музыки";
+
 
 
 			// Create your application here
 		}
+
 	}
 }

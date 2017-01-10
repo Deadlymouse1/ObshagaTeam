@@ -17,7 +17,7 @@ using MvvmCross.Droid.Views;
 
 namespace HelloMvx4.Droid.Views
 {
-	[Activity(Label = "View for FirstViewModel")]
+	[Activity(Label = "View for FirstViewModel", Theme = "@style/MyTheme")]
 	public class FirstView : MvxActivity
 	{
 		XuniCalendar calendar;
@@ -25,8 +25,8 @@ namespace HelloMvx4.Droid.Views
 		TextView SoonViewName;
 		TextView SoonViewTime;
 		TextView SoonViewMore;
-		Button button;
 		AlarmManager am;
+		Toolbar toolbar;
 
 		protected override void OnCreate(Bundle bundle)
 		{
@@ -47,7 +47,6 @@ namespace HelloMvx4.Droid.Views
 
 			// get chart from view
 			calendar = FindViewById<XuniCalendar>(Resource.Id.calendar);
-			button = FindViewById<Button>(Resource.Id.calendarButton);
 			SoonViewName = FindViewById<TextView>(Resource.Id.SoonEventName);
 			SoonViewTime = FindViewById<TextView>(Resource.Id.SoonEventTime);
 			SoonViewMore = FindViewById<TextView>(Resource.Id.SoonEventMore);
@@ -94,11 +93,16 @@ namespace HelloMvx4.Droid.Views
 			calendar.DaySlotLoading += Calendar_DaySlotLoading;
 			calendar.SelectionBackgroundColor = Android.Graphics.Color.White;
 
+			toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+			SetActionBar(toolbar);
+
+			ActionBar.Title = "Календарь";
+
 		}
 
 		private void showPopupMenu(int i)
 		{
-			PopupMenu popupMenu = new PopupMenu(this, button);
+			PopupMenu popupMenu = new PopupMenu(this, toolbar);
 			popupMenu.Inflate(Resource.Menu.popupmenu);
 			popupMenu.MenuItemClick += (sender, e) =>
 			{
@@ -153,7 +157,7 @@ namespace HelloMvx4.Droid.Views
 			layout.SetGravity(GravityFlags.Top);
 			layout.SetVerticalGravity(GravityFlags.Top);
 			layout.Orientation = Orientation.Vertical;
-			layout.SetBackgroundColor(Android.Graphics.Color.Red);
+			layout.SetBackgroundColor(Android.Graphics.Color.White);
 			layout.SetPadding(5, 5, 5, 5);
 			LinearLayout.LayoutParams linearLayoutParams1 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FillParent, LinearLayout.LayoutParams.FillParent);
 			layout.LayoutParameters = linearLayoutParams1;
@@ -162,13 +166,15 @@ namespace HelloMvx4.Droid.Views
 			TextView tv = new TextView(ApplicationContext);
 			LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.WrapContent);
 			tv.LayoutParameters = linearLayoutParams;
-			tv.Gravity = GravityFlags.Top;   //текст цифр
+			tv.Gravity = GravityFlags.Center;   //текст цифр
 			tv.Text = day.ToString();
+			tv.SetTextColor(Android.Graphics.Color.Black);
+
 
 			if (e.AdjacentDay)
 			{
 				// format adjacent day text
-				tv.SetTextColor(Android.Graphics.Color.Green); //цвет неактивных дней
+				tv.SetTextColor(Android.Graphics.Color.Gray); //цвет неактивных дней
 			}
 
 			// add text element to layout
@@ -227,7 +233,7 @@ namespace HelloMvx4.Droid.Views
 
 					if (records[i].Month == intMonth && day.ToString() == records[i].Day)
 					{
-						layout.SetBackgroundColor(Android.Graphics.Color.Green);
+						layout.SetBackgroundColor(Android.Graphics.Color.LightBlue);
 					}
 				}
 			}

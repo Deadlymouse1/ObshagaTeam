@@ -123,7 +123,6 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\SecondView.axml" />
     <AndroidResource Include="Resources\values\FirstView.xml" />
-    <AndroidResource Include="Resources\drawable\bg.png" />
     <AndroidResource Include="Resources\layout\ThirdView.axml" />
     <AndroidResource Include="Resources\drawable\ovalButton.axml" />
     <AndroidResource Include="Resources\raw\sound.mp3" />
@@ -132,6 +131,8 @@
     <AndroidResource Include="Resources\raw\sound3.mp3" />
     <AndroidResource Include="Resources\layout\FourView.axml" />
     <AndroidResource Include="Resources\menu\popupmenu.xml" />
+    <AndroidResource Include="Resources\layout\toolbar.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

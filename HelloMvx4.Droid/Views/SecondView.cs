@@ -12,13 +12,12 @@ using MvvmCross.Droid.Views;
 
 namespace HelloMvx4.Droid.Views
 {
-	[Activity(Label = "View for SecondViewModel")]
+	[Activity(Label = "View for SecondViewModel", Theme = "@style/MyTheme")]
 	public class SecondView : MvxActivity
 	{
 		TextView view;
 		EditText name;
 		MvxTimePicker time;
-		EditText timeRepeat;
 		Button sound;
 		EditText more;
 		Button addButton;
@@ -42,7 +41,7 @@ namespace HelloMvx4.Droid.Views
 
 			name = FindViewById<EditText>(Resource.Id.nameEditView);
 			time = FindViewById<MvxTimePicker>(Resource.Id.timePicker);
-			timeRepeat = FindViewById<EditText>(Resource.Id.intervalEdit);
+
 			sound = FindViewById<Button>(Resource.Id.musicButton);
 			more = FindViewById<EditText>(Resource.Id.lastEditText);
 			addButton = FindViewById<Button>(Resource.Id.addButton);
@@ -53,7 +52,7 @@ namespace HelloMvx4.Droid.Views
 				(ViewModel as SecondViewModel).record.Name = name.Text;
 				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
 				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
-				(ViewModel as SecondViewModel).record.TimeRepeat = timeRepeat.Text;
+
 				(ViewModel as SecondViewModel).record.More = more.Text;
 				(ViewModel as SecondViewModel).MyButtonCommand.Execute();
 			};
@@ -63,7 +62,7 @@ namespace HelloMvx4.Droid.Views
 				name.Text = (ViewModel as SecondViewModel).record.Name;
 				time.Hour = (ViewModel as SecondViewModel).record.Hour;
 				time.Minute = (ViewModel as SecondViewModel).record.Min;
-				timeRepeat.Text = (ViewModel as SecondViewModel).record.TimeRepeat;
+
 				sound.Text = (ViewModel as SecondViewModel).record.Sound;
 				more.Text = (ViewModel as SecondViewModel).record.More;
 
@@ -87,7 +86,7 @@ namespace HelloMvx4.Droid.Views
 				(ViewModel as SecondViewModel).record.Name = name.Text;
 				(ViewModel as SecondViewModel).record.Hour = time.Value.Hours;
 				(ViewModel as SecondViewModel).record.Min = time.Value.Minutes;
-				(ViewModel as SecondViewModel).record.TimeRepeat = timeRepeat.Text;
+
 				(ViewModel as SecondViewModel).record.SoundId = Resource.Raw.sound; //sound.Text;
 				(ViewModel as SecondViewModel).record.More = more.Text;
 
@@ -105,6 +104,11 @@ namespace HelloMvx4.Droid.Views
 
 				(ViewModel as SecondViewModel).MyButtonCommand2.Execute();
 			};
+			var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+			SetActionBar(toolbar);
+
+			ActionBar.Title = "Записи";
 		}
+
 	}
 }

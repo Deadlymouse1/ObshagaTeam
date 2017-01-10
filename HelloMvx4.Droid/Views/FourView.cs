@@ -37,6 +37,7 @@ namespace HelloMvx4.Droid
 				var resultIntent = new Intent(this, typeof(FirstView));
 				resultIntent.SetFlags(ActivityFlags.NewTask);
 				StartActivity(resultIntent);
+
 			};
 
 

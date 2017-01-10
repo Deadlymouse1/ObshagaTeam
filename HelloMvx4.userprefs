@@ -4,23 +4,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="HelloMvx4.Droid\Views\SecondView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloMvx4.Droid\Views\FirstView.cs">
     <Files>
-      <File FileName="HelloMvx4.Core\ViewModels\FirstViewModel.cs" Line="17" Column="18" />
-      <File FileName="HelloMvx4.Core\ViewModels\SecondViewModel.cs" Line="35" Column="36" />
-      <File FileName="HelloMvx4.Core\ViewModels\ThirdViewModel.cs" Line="14" Column="26" />
-      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="116" Column="35" />
-      <File FileName="HelloMvx4.Droid\Resources\layout\FirstView.axml" Line="68" Column="3" />
-      <File FileName="HelloMvx4.Droid\Views\SecondView.cs" Line="85" Column="33" />
-      <File FileName="HelloMvx4.Droid\Resources\layout\SecondView.axml" Line="25" Column="27" />
-      <File FileName="HelloMvx4.Droid\Views\Alarm.cs" Line="26" Column="26" />
-      <File FileName="HelloMvx4.Droid\Views\ThirdView.cs" Line="71" Column="38" />
-      <File FileName="HelloMvx4.Droid\Views\FourView.cs" Line="34" Column="47" />
-      <File FileName="HelloMvx4.Core\ViewModels\RecordContainer.cs" Line="21" Column="39" />
-      <File FileName="HelloMvx4.Droid\Views\CalRecord.cs" Line="10" Column="16" />
-      <File FileName="HelloMvx4.Core\ViewModels\Record.cs" Line="20" Column="36" />
-      <File FileName="HelloMvx4.Droid\Resources\menu\popupmenu.xml" Line="10" Column="41" />
+      <File FileName="HelloMvx4.Droid\Resources\values\styles.xml" Line="8" Column="1" />
+      <File FileName="HelloMvx4.Droid\Views\FourView.cs" Line="47" Column="2" />
+      <File FileName="HelloMvx4.Droid\Views\FirstView.cs" Line="31" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid PreferredExecutionTarget="Android.192.168.182.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.HelloMvx4.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.227.101:5555" />
 </Properties>
